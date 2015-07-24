@@ -1,9 +1,10 @@
 <div class="slider">
     <div class="slide" ng-repeat="image in images" ng-show="image.visible">
-       <!-- <img ng-src="{{image.src}}" />-->
 
-        "{{san(image.content)}}"
-        {{image.content}}
+
+
+
+        <p ng-include="(image.content)"></p>
 
 
 

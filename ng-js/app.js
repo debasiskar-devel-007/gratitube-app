@@ -57,6 +57,12 @@ gartitube.config(function($stateProvider, $urlRouterProvider,$sceProvider,$sceDe
 
         .state('intro',{
             url:"/intro",
+            resolve:{
+                'MyServiceData':function(MyService){
+                    // MyServiceData will also be injectable in your controller, if you don't want this you could create a new promise with the $q service
+                    return MyService.promise;
+                }
+            },
 
             views: {
 
@@ -93,53 +99,40 @@ gartitube.directive('slider', function($timeout) {
 
 
 
-gartitube.controller('loader', function($scope,$sce,$http,$templateCache,$compile) {
+gartitube.controller('loader', function($scope,$sce,$http,MyService) {
 
 
     $scope.san= function(url) {
-        alert(url);
-
-        $sce.parseAsResourceUrl(value['content']);
-        $sce.trustAsUrl(value['content']);
-
-        $http({
-            method  : 'GET',
-            async:   false,
-            url     : url,
-            //data    : {username: $stateParams.userId},  // pass in data as strings
-           // headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
-        }) .success(function(data) {
-            alert( data);
-
-        });
-        return url;
+        alert( MyService.doStuff('slider1'));
         // $sce.getTrustedUrl(url);
 
     };
 
+    var data=(MyService.doStuff('slider1'));
+   // alert(data);
     $scope.images = [{
         //src: 'ng-images/mobile300.png',
         title: 'Pic 1',
-        content:$sce.trustAsUrl('partials/slider1.html')
+        content:"partials/slider1.html"
     }, {
         // src: 'ng-images/T-Mobile-Comet-1.jpg',
         title: 'Pic 2',
-        content:$sce.trustAsUrl('partials/slider2.html')
+        content:"partials/slider2.html"
     },
         {
             //src: 'ng-images/mobile300.png',
             title: 'Pic 2',
-            content:$sce.trustAsUrl('partials/slider3.html')
+            content:"partials/slider3.html"
         },
         {
             //src: 'ng-images/mobile300.png',
             title: 'Pic 2',
-            content:$sce.trustAsUrl('partials/slider4.html'),
+            content:"partials/slider4.html"
         },
         {
             //src: 'ng-images/mobile300.png',
             title: 'Pic 2',
-            content:$sce.trustAsUrl('partials/slider5.html')
+            content:"partials/slider5.html"
         }
     ];
     //alert($sce.isEnabled());
@@ -187,3 +180,64 @@ gartitube.controller('loader', function($scope,$sce,$http,$templateCache,$compil
 
 
 
+gartitube.service('MyService', function($http) {
+    var slider1data = null;
+    var promise=null;
+    var slider2data = null;
+    var slider3data = null;
+    var slider4data = null;
+    var slider5data = null;
+    var testimonialjson = null;
+
+    var slider1 = $http.get('partials/slider1.html').success(function (slider1) {
+        //alert(data);
+        slider1data=slider1;
+    });
+    var slider2 = $http.get('partials/slider2.html').success(function (slider2) {
+        //alert(data);
+        slider2data=slider2;
+    });
+    var slider3 = $http.get('partials/slider3.html').success(function (slider3) {
+        //alert(data);
+        slider3data=slider3;
+    });
+    var slider4 = $http.get('partials/slider4.html').success(function (slider4) {
+        //alert(data);
+        slider4data=slider4;
+    });
+    var slider5 = $http.get('partials/slider5.html').success(function (slider5) {
+        //alert(slider5);
+        slider5data=slider5;
+    });
+    return {
+        promise:slider1,
+        setData: function (slider5data) {
+            //alert(slider5data);
+            slider1data = slider5data;
+        },
+        doStuff: function (t) {
+            //alert(myData);
+            if(t=='slider1')
+            //alert(data);
+                return slider1data;//.getSomeData();
+            if(t=='slider2'){
+
+                return slider2data;
+
+            }
+            if(t=='slider3'){
+                return slider3data;
+
+            }
+            if(t=='slider4'){
+                return slider4data;
+
+            }
+            if(t=='slider5'){
+                return slider5data;
+
+            }
+        }
+    };
+
+});
