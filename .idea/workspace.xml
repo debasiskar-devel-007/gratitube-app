@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72d28325-971e-4fe5-8e9f-e79750524f1b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/slider3.html" afterPath="$PROJECT_DIR$/partials/slider3.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/slider5.html" afterPath="$PROJECT_DIR$/partials/slider5.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="gratitube-app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/partials/slider5.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.036876354">
-              <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
+              <caret line="1" column="39" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -294,7 +290,13 @@
       <option name="project" value="LOCAL" />
       <updated>1438148217469</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="11.06 AM 29 th july">
+      <created>1438164455384</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1438164455384</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -524,7 +526,7 @@
     <entry file="file://$PROJECT_DIR$/partials/slider5.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.036876354">
-          <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
+          <caret line="1" column="39" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
           <folding />
         </state>
       </provider>
