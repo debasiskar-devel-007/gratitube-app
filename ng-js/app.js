@@ -102,6 +102,45 @@ gartitube.directive('slider', function($timeout) {
 gartitube.controller('loader', function($scope,$sce,$http,MyService) {
 
 
+   $scope.init=function(){
+
+       $scope.username=angular.element( document.querySelector( '#username' )).val();
+       $scope.deviceid=angular.element( document.querySelector( '#deviceid' )).val();
+       //alert($scope.username+'='+$scope.deviceid);
+       if( ($scope.username)!='' &&  ($scope.deviceid)!=''){
+
+           $scope.userinfo={
+               username:$scope.username,
+               deviceid:$scope.deviceid
+
+           }
+
+
+
+           $http({
+               method  : 'POST',
+               async:   false,
+               url     : 'http://admin.gratitube.influxiq.com/?q=ngmodule/register',
+               data    : $.param($scope.userinfo),  // pass in data as strings
+               headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
+           }) .success(function(data) {
+               alert(data);
+
+
+
+           });
+
+
+
+       }
+
+   };
+
+    setTimeout(function(){
+
+        $scope.init();
+
+    },3000);
     $scope.san= function(url) {
         alert( MyService.doStuff('slider1'));
         // $sce.getTrustedUrl(url);
