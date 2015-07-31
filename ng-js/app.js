@@ -13,7 +13,8 @@ var gartitube = angular.module('gartitube', [
     'angularValidator',
     'ngCookies',
     'ngDialog',
-    'ngSanitize'
+    'ngSanitize',
+    'shoppinpal.mobile-menu'
     // 'homeControllers'
 ]);
 
@@ -153,7 +154,7 @@ gartitube.controller('index', function($scope,$sce,$http,MyService,$cookieStore,
                     $scope.redirected='yes';
                     angular.element( document.querySelector( '#username' )).val('');
                     angular.element( document.querySelector( '#deviceid' )).val('');
-                    //$state.go('home');
+                    $state.go('home');
                 }
                 else{
                     $cookieStore.put('loginfail','yes')
@@ -163,19 +164,21 @@ gartitube.controller('index', function($scope,$sce,$http,MyService,$cookieStore,
                         //showClose:false,
                         scope:$scope
                     });
-                    //$state.go('intro');
+                    $state.go('intro');
 
                 }
 
 
 
             });
+            //$scope.redirect();
+
+
+
+
+
+        }else{
             $scope.redirect();
-
-
-
-
-
         }
 
 
@@ -184,7 +187,7 @@ gartitube.controller('index', function($scope,$sce,$http,MyService,$cookieStore,
     };
 
     setTimeout(function(){
-        $scope.redirect();
+
 
         $scope.init();
 
@@ -195,17 +198,17 @@ gartitube.controller('index', function($scope,$sce,$http,MyService,$cookieStore,
     $scope.redirect=function(){
 
 
-        alert($cookieStore.get('username'));
+       // alert($cookieStore.get('username'));
         if( $cookieStore.get('username')>0){
 
-            alert($cookieStore.get('username'));
+            //alert($cookieStore.get('username'));
             $scope.username=''
             $scope.deviceid=''
             angular.element( document.querySelector( '#username' )).val('');
             angular.element( document.querySelector( '#deviceid' )).val('');
             $state.go('home');
         }else{
-            alert(2343);
+            //alert(2343);
 
             setTimeout(function(){
                 $state.go('intro');
