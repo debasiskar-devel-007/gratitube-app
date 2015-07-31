@@ -115,6 +115,36 @@ gartitube.config(function($stateProvider, $urlRouterProvider,$sceProvider,$sceDe
 
             }
         }
+    )
+
+
+        .state('record',{
+            url:"/record",
+
+
+            views: {
+
+                // the main template will be placed here (relatively named)
+                '': { templateUrl: 'index.html' },
+                'navigation': { templateUrl: 'partials/navigation.html'
+                    //ontroller:'loader'
+
+                },
+
+                // the child views will be defined here (absolutely named)
+                'content': { templateUrl: 'partials/record.html' ,
+                    controller:'home'
+
+                },
+                'footer': { templateUrl: 'partials/footer.html' ,
+                    controller:'home'
+
+                }
+
+
+
+            }
+        }
 
     )
 
@@ -222,7 +252,7 @@ gartitube.controller('index', function($scope,$sce,$http,MyService,$cookieStore,
     $scope.redirect=function(){
 
 
-       // alert($cookieStore.get('username'));
+        // alert($cookieStore.get('username'));
         if( $cookieStore.get('username')>0){
 
             //alert($cookieStore.get('username'));

@@ -5,6 +5,21 @@
     float: left!important;
     display: inline!important;
 }
+.floatr{
+    float: right!important;
+    display: inline!important;
+    width: 90% !important;
+}
+
+#tabs , .tabc{
+    height: auto !important;
+    width: 90% !important;
+    display: inline !important;
+}
+.clear{
+    clear:both !important;
+}
+
 
 ul {
     list-style: none;
@@ -24,6 +39,7 @@ li {
     border: 1px solid black;
     clear: both;
     padding: 0 1em;
+    width: 90% !important;
 }
 .active {
     background-color: #FFF;
