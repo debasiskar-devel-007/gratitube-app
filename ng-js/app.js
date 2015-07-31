@@ -79,24 +79,24 @@ gartitube.config(function($stateProvider, $urlRouterProvider,$sceProvider,$sceDe
             }
         })
 
-            .state('home',{
-                url:"/home",
+        .state('home',{
+            url:"/home",
 
 
-                views: {
+            views: {
 
-                    // the main template will be placed here (relatively named)
-                    '': { templateUrl: 'index.html' },
+                // the main template will be placed here (relatively named)
+                '': { templateUrl: 'index.html' },
 
-                    // the child views will be defined here (absolutely named)
-                    'loader': { templateUrl: 'partials/home.html' ,
-                        controller:'home'
-
-                    }
-
+                // the child views will be defined here (absolutely named)
+                'loader': { templateUrl: 'partials/home.html' ,
+                    controller:'home'
 
                 }
+
+
             }
+        }
 
     )
 
@@ -123,6 +123,9 @@ gartitube.controller('index', function($scope,$sce,$http,MyService,$cookieStore,
 
     $scope.init=function(){
 
+
+
+
         $scope.username=angular.element( document.querySelector( '#username' )).val();
         $scope.deviceid=angular.element( document.querySelector( '#deviceid' )).val();
         //alert($scope.username+'='+$scope.deviceid);
@@ -145,7 +148,12 @@ gartitube.controller('index', function($scope,$sce,$http,MyService,$cookieStore,
             }) .success(function(data) {
                 if(data>0){
                     $cookieStore.put('username',data);
-                    $state.go('home');
+                    $scope.username=''
+                    $scope.deviceid=''
+                    $scope.redirected='yes';
+                    angular.element( document.querySelector( '#username' )).val('');
+                    angular.element( document.querySelector( '#deviceid' )).val('');
+                    //$state.go('home');
                 }
                 else{
                     $cookieStore.put('loginfail','yes')
@@ -155,34 +163,56 @@ gartitube.controller('index', function($scope,$sce,$http,MyService,$cookieStore,
                         //showClose:false,
                         scope:$scope
                     });
-                    $state.go('intro');
+                    //$state.go('intro');
 
                 }
 
 
 
             });
+            $scope.redirect();
 
-            if( $cookieStore.get('username')>0){
-                $state.go('home');
-            }else{
 
-                setTimeout(function(){
-                    $state.go('intro');
-                },6000);
-            }
 
 
 
         }
 
+
+
+
     };
 
     setTimeout(function(){
+        $scope.redirect();
 
         $scope.init();
 
     },3000);
+
+
+
+    $scope.redirect=function(){
+
+
+        alert($cookieStore.get('username'));
+        if( $cookieStore.get('username')>0){
+
+            alert($cookieStore.get('username'));
+            $scope.username=''
+            $scope.deviceid=''
+            angular.element( document.querySelector( '#username' )).val('');
+            angular.element( document.querySelector( '#deviceid' )).val('');
+            $state.go('home');
+        }else{
+            alert(2343);
+
+            setTimeout(function(){
+                $state.go('intro');
+            },6000);
+        }
+
+    }
 
 
 })
@@ -218,7 +248,12 @@ gartitube.controller('loader', function($scope,$sce,$http,MyService,$cookieStore
                 headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
             }) .success(function(data) {
                 if(data>0){
+                    scope.username=''
+                    $scope.deviceid=''
+                    angular.element( document.querySelector( '#username' )).val('');
+                    angular.element( document.querySelector( '#deviceid' )).val('');
                     $cookieStore.put('username',data);
+                    alert(data);
                     $state.go('home');
                 }
                 else{
@@ -237,14 +272,7 @@ gartitube.controller('loader', function($scope,$sce,$http,MyService,$cookieStore
 
             });
 
-            if( $cookieStore.get('username')>0){
-                $state.go('home');
-            }else{
 
-                setTimeout(function(){
-                    $state.go('intro');
-                },6000);
-            }
 
 
 
@@ -268,7 +296,7 @@ gartitube.controller('loader', function($scope,$sce,$http,MyService,$cookieStore
     };
 
     var data=(MyService.doStuff('slider1'));
-   // alert(data);
+    // alert(data);
     $scope.images = [{
         //src: 'ng-images/mobile300.png',
         title: 'Pic 1',
@@ -314,14 +342,14 @@ gartitube.controller('loader', function($scope,$sce,$http,MyService,$cookieStore
     $scope.currentIndex = 0; // Initially the index is at the first image
 
     $scope.next1= function() {
-       // $sce();
+        // $sce();
         //alert(8);
         $scope.currentIndex < $scope.images.length - 1 ? $scope.currentIndex++ : $scope.currentIndex =  $scope.currentIndex;
-       // alert( $scope.currentIndex);
+        // alert( $scope.currentIndex);
     };
 
     $scope.prev1 = function() {
-       // $sce();
+        // $sce();
         $scope.currentIndex > 0 ? $scope.currentIndex-- : $scope.currentIndex = 0;
         //alert( $scope.currentIndex);
     };
