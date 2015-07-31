@@ -102,7 +102,11 @@ gartitube.config(function($stateProvider, $urlRouterProvider,$sceProvider,$sceDe
                 },
 
                 // the child views will be defined here (absolutely named)
-                'loader': { templateUrl: 'partials/navigation.html' ,
+                'content': { templateUrl: 'partials/home.html' ,
+                    controller:'home'
+
+                },
+                'footer': { templateUrl: 'partials/footer.html' ,
                     controller:'home'
 
                 }
@@ -242,7 +246,28 @@ gartitube.controller('index', function($scope,$sce,$http,MyService,$cookieStore,
 
 gartitube.controller('home', function($scope,$sce,$http,MyService,$cookieStore,$state,ngDialog,number) {
 
-    alert("this is home");
+    //alert("this is home");
+
+    $scope.tabs = [{
+        title: 'One',
+        url: 'one.tpl.html'
+    }, {
+        title: 'Two',
+        url: 'two.tpl.html'
+    }, {
+        title: 'Three',
+        url: 'three.tpl.html'
+    }];
+
+    $scope.currentTab = 'one.tpl.html';
+
+    $scope.onClickTab = function (tab) {
+        $scope.currentTab = tab.url;
+    }
+
+    $scope.isActiveTab = function(tabUrl) {
+        return tabUrl == $scope.currentTab;
+    }
 })
 
 gartitube.controller('loader', function($scope,$sce,$http,MyService,$cookieStore,$state,ngDialog) {
