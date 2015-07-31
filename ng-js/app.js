@@ -46,7 +46,7 @@ gartitube.config(function($stateProvider, $urlRouterProvider,$sceProvider,$sceDe
 
                 // the child views will be defined here (absolutely named)
                 'loader': { templateUrl: 'partials/loader.html' ,
-                    controller:'loader'
+                    controller:'index'
 
                 }
 
@@ -77,7 +77,26 @@ gartitube.config(function($stateProvider, $urlRouterProvider,$sceProvider,$sceDe
 
 
             }
-        }
+        })
+
+            .state('home',{
+                url:"/home",
+
+
+                views: {
+
+                    // the main template will be placed here (relatively named)
+                    '': { templateUrl: 'index.html' },
+
+                    // the child views will be defined here (absolutely named)
+                    'loader': { templateUrl: 'partials/home.html' ,
+                        controller:'home'
+
+                    }
+
+
+                }
+            }
 
     )
 
@@ -98,49 +117,150 @@ gartitube.directive('slider', function($timeout) {
 });
 
 
-
-gartitube.controller('loader', function($scope,$sce,$http,MyService) {
-
-
-   $scope.init=function(){
-
-       $scope.username=angular.element( document.querySelector( '#username' )).val();
-       $scope.deviceid=angular.element( document.querySelector( '#deviceid' )).val();
-       //alert($scope.username+'='+$scope.deviceid);
-       if( ($scope.username)!='' &&  ($scope.deviceid)!=''){
-
-           $scope.userinfo={
-               username:$scope.username,
-               deviceid:$scope.deviceid
-
-           }
+gartitube.controller('index', function($scope,$sce,$http,MyService,$cookieStore,$state,ngDialog) {
 
 
 
-           $http({
-               method  : 'POST',
-               async:   false,
-               url     : 'http://admin.gratitube.influxiq.com/?q=ngmodule/register',
-               data    : $.param($scope.userinfo),  // pass in data as strings
-               headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
-           }) .success(function(data) {
-               alert(data);
+    $scope.init=function(){
+
+        $scope.username=angular.element( document.querySelector( '#username' )).val();
+        $scope.deviceid=angular.element( document.querySelector( '#deviceid' )).val();
+        //alert($scope.username+'='+$scope.deviceid);
+        if( ($scope.username)!='' &&  ($scope.deviceid)!=''){
+
+            $scope.userinfo={
+                username:$scope.username,
+                deviceid:$scope.deviceid
+
+            }
 
 
 
-           });
+            $http({
+                method  : 'POST',
+                async:   false,
+                url     : 'http://admin.gratitube.influxiq.com/?q=ngmodule/register',
+                data    : $.param($scope.userinfo),  // pass in data as strings
+                headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
+            }) .success(function(data) {
+                if(data>0){
+                    $cookieStore.put('username',data);
+                    $state.go('home');
+                }
+                else{
+                    $cookieStore.put('loginfail','yes')
+                    $scope.dialog1 = ngDialog.open({
+                        template: '<div><div>Your Login failed .. please try again!</div><div>',
+                        plain: true,
+                        //showClose:false,
+                        scope:$scope
+                    });
+                    $state.go('intro');
+
+                }
 
 
 
-       }
+            });
 
-   };
+            if( $cookieStore.get('username')>0){
+                $state.go('home');
+            }else{
+
+                setTimeout(function(){
+                    $state.go('intro');
+                },6000);
+            }
+
+
+
+        }
+
+    };
 
     setTimeout(function(){
 
         $scope.init();
 
     },3000);
+
+
+})
+
+gartitube.controller('loader', function($scope,$sce,$http,MyService,$cookieStore,$state,ngDialog) {
+
+    alert("this is home");
+})
+
+gartitube.controller('loader', function($scope,$sce,$http,MyService,$cookieStore,$state,ngDialog) {
+
+
+    $scope.init=function(){
+
+        $scope.username=angular.element( document.querySelector( '#username' )).val();
+        $scope.deviceid=angular.element( document.querySelector( '#deviceid' )).val();
+        //alert($scope.username+'='+$scope.deviceid);
+        if( ($scope.username)!='' &&  ($scope.deviceid)!=''){
+
+            $scope.userinfo={
+                username:$scope.username,
+                deviceid:$scope.deviceid
+
+            }
+
+
+
+            $http({
+                method  : 'POST',
+                async:   false,
+                url     : 'http://admin.gratitube.influxiq.com/?q=ngmodule/register',
+                data    : $.param($scope.userinfo),  // pass in data as strings
+                headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
+            }) .success(function(data) {
+                if(data>0){
+                    $cookieStore.put('username',data);
+                    $state.go('home');
+                }
+                else{
+                    $cookieStore.put('loginfail','yes')
+                    $scope.dialog1 = ngDialog.open({
+                        template: '<div><div>Your Login failed .. please try again!</div><div>',
+                        plain: true,
+                        //showClose:false,
+                        scope:$scope
+                    });
+                    $state.go('intro');
+
+                }
+
+
+
+            });
+
+            if( $cookieStore.get('username')>0){
+                $state.go('home');
+            }else{
+
+                setTimeout(function(){
+                    $state.go('intro');
+                },6000);
+            }
+
+
+
+        }
+
+    };
+
+    setTimeout(function(){
+
+        $scope.init();
+
+    },3000);
+
+
+
+
     $scope.san= function(url) {
         alert( MyService.doStuff('slider1'));
         // $sce.getTrustedUrl(url);
@@ -187,7 +307,10 @@ gartitube.controller('loader', function($scope,$sce,$http,MyService) {
 
 
 
-
+    if( $cookieStore.get('loginfail')=='yes'){
+        $scope.currentIndex = $scope.images.length - 1;
+        $cookieStore.remove('loginfail');
+    }
     $scope.currentIndex = 0; // Initially the index is at the first image
 
     $scope.next1= function() {
