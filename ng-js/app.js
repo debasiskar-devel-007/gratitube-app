@@ -14,7 +14,7 @@ var gartitube = angular.module('gartitube', [
     'ngCookies',
     'ngDialog',
     'ngSanitize',
-    'shoppinpal.mobile-menu'
+    'ap.lateralSlideMenu'
     // 'homeControllers'
 ]);
 
@@ -44,6 +44,10 @@ gartitube.config(function($stateProvider, $urlRouterProvider,$sceProvider,$sceDe
 
                 // the main template will be placed here (relatively named)
                 '': { templateUrl: 'index.html' },
+                'navigation': { templateUrl: ''
+                    //ontroller:'loader'
+
+                },
 
                 // the child views will be defined here (absolutely named)
                 'loader': { templateUrl: 'partials/loader.html' ,
@@ -69,6 +73,10 @@ gartitube.config(function($stateProvider, $urlRouterProvider,$sceProvider,$sceDe
 
                 // the main template will be placed here (relatively named)
                 '': { templateUrl: 'index.html' },
+                'navigation': { templateUrl: ''
+                    //ontroller:'loader'
+
+                },
 
                 // the child views will be defined here (absolutely named)
                 'loader': { templateUrl: 'partials/intro.html' ,
@@ -88,12 +96,17 @@ gartitube.config(function($stateProvider, $urlRouterProvider,$sceProvider,$sceDe
 
                 // the main template will be placed here (relatively named)
                 '': { templateUrl: 'index.html' },
+                'navigation': { templateUrl: 'partials/navigation.html'
+                    //ontroller:'loader'
+
+                },
 
                 // the child views will be defined here (absolutely named)
-                'loader': { templateUrl: 'partials/home.html' ,
+                'loader': { templateUrl: 'partials/navigation.html' ,
                     controller:'home'
 
                 }
+
 
 
             }
@@ -117,6 +130,13 @@ gartitube.directive('slider', function($timeout) {
     };
 });
 
+gartitube.service('number',  function() {
+    return {
+        isPositive: function(operationPrice) {
+            return String(operationPrice).indexOf("-") == -1;
+        }
+    };
+});
 
 gartitube.controller('index', function($scope,$sce,$http,MyService,$cookieStore,$state,ngDialog) {
 
@@ -220,7 +240,7 @@ gartitube.controller('index', function($scope,$sce,$http,MyService,$cookieStore,
 
 })
 
-gartitube.controller('loader', function($scope,$sce,$http,MyService,$cookieStore,$state,ngDialog) {
+gartitube.controller('home', function($scope,$sce,$http,MyService,$cookieStore,$state,ngDialog,number) {
 
     alert("this is home");
 })
