@@ -104,7 +104,7 @@ body {
 }
 .lateral-slide-menu-in-transition .lateral-slide-menu-scrollable-container {
   display: block;
-  width: 250px;
+  width: 280px;
 }
 .lateral-slide-menu-is-open .lateral-slide-menu-overlay {
   display: block;
@@ -134,7 +134,7 @@ body {
   margin: 0;
 }
 .lateral-slide-menu {
-  background-color: #191918;
+
   font-size: 13px;
   /* ========== LISTE DES LIENS : + styles des liens en bas ======================= */
   /* ============================================================================== */
@@ -170,18 +170,11 @@ body {
   top: 8px;
   margin: 0 10px 0 11px;
 }
-.toggle-menu {
-  display: block;
-  width: 28px;
-  height: 28px;
-  background: url("../ng-images/menu-normal.png") no-repeat;
-  background-size: 100% 100%;
-}
+
 .main-page {
-  background-color: #ffffff;
-  min-height: 1280px;
+
   margin: 0;
-  padding: 8px;
+
 }
 /*
 .lateral-slide-menu-is-open .lateral-slide-menu-overlay {

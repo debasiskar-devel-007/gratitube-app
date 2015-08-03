@@ -59,15 +59,17 @@
 <div ui-view></div>
 <a ui-sref="state2">State 2</a>
 <div ui-view></div>-->
-<div>
-    <div class="floatl" ui-view="navigation"></div>
-
-    <div class="floatr" ui-view="content"></div>
+<div class="homepagewrapper">
+    <div class="menucontain" ui-view="navigation"></div>
+    <div class="clear"></div>
+    <div class="maincontent" ui-view="content"></div>
 
 </div>
-<div class="clear"></div>
 
+<div class="clear"></div>
 <div ui-view="footer"></div>
+
+
 <div ui-view="loader"></div>
 <input type="hidden" id="deviceid">
 <input type="hidden" id="username">

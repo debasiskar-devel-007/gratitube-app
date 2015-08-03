@@ -6,22 +6,40 @@
 }
 .slider {
     position: relative;
-    padding: 5px;
-    width: 610px;
-    margin: auto;
-    margin-top: 40px;
+    padding: 0px;
+    width: auto;
+
+    margin: 0px;
 }
 .slide {
     position: absolute;
     top: 0;
     left: 0;
-    box-shadow: 0px 0px 15px #999;
+
 }
 .arrows {
+
+
+    width: 98vw;   height:100vh;
+
     position: absolute;
-    top: 10px;
-    right: 20px;
+
 }
+
+.arrows button{ border: none; background: none;  display: block;
+
+   }
+
+.arrowswrapper{ width: 99vw;   height:100vh;  display: table-cell; text-align: center; vertical-align: middle;}
+
+.btnprev{ float: left;  display: block; width: 26px;
+    height: 34px;}
+
+ .btnnext{ float: right;  display: block; width: 26px;
+     height: 34px;}
+
+
+
 .arrows img {
     height: 32px;
 }
