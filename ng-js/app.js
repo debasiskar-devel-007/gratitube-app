@@ -90,8 +90,8 @@ gartitube.config(function($stateProvider, $urlRouterProvider,$sceProvider,$sceDe
 
                 // the main template will be placed here (relatively named)
                 '': { templateUrl: 'index.html' },
-                'navigation': { templateUrl: 'partials/navigation.html'
-                    //ontroller:'loader'
+                'navigation': { templateUrl: 'partials/navigation.html',
+                    controller:'navigation'
 
                 },
 
@@ -178,12 +178,13 @@ gartitube.controller('index', function($scope,$sce,$http,MyService,$cookieStore,
         $scope.username=angular.element( document.querySelector( '#username' )).val();
         $scope.deviceid=angular.element( document.querySelector( '#deviceid' )).val();
         $scope.accessToken=angular.element( document.querySelector( '#accessToken' )).val();
-        alert($scope.username+'='+$scope.deviceid+"----");
+        //alert($scope.username+'='+$scope.deviceid+"----"+$scope.accessToken);
         if( ($scope.username)!='' &&  ($scope.deviceid)!=''){
 
             $scope.userinfo={
                 username:$scope.username,
-                deviceid:$scope.deviceid
+                deviceid:$scope.deviceid,
+                accessToken:$scope.accessToken
                // accessToken:$scope.accessToken
 
             }
@@ -259,6 +260,11 @@ gartitube.controller('index', function($scope,$sce,$http,MyService,$cookieStore,
             $state.go('home');
         }else{
             //alert(2343);
+           /* setTimeInterval(function(){
+
+
+
+            },4000);*/
 
             setTimeout(function(){
 
@@ -270,19 +276,56 @@ gartitube.controller('index', function($scope,$sce,$http,MyService,$cookieStore,
 
 
 })
+gartitube.controller('navigation', function($scope,$sce,$http,MyService,$cookieStore,$state,ngDialog,number) {
+
+
+    $scope.inIt= function () {
+
+        $scope.userinfo={
+            username:21
+
+
+        }
+
+
+        $http({
+            method  : 'POST',
+            async:   false,
+            url     : 'http://admin.gratitube.influxiq.com/?q=ngmodule/getuserpic',
+            data    : $.param($scope.userinfo),  // pass in data as strings
+            headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
+        }) .success(function(data) {
+           // alert(data)
+            $scope.userimage=data;
+
+
+
+        });
+
+
+    }
+
+    setTimeout(function(){
+
+        $scope.inIt();
+    },3100);
+
+})
 
 gartitube.controller('home', function($scope,$sce,$http,MyService,$cookieStore,$state,ngDialog,number) {
 
     //alert("this is home");
 
+    //alert($cookieStore.get('username'));
+
     $scope.tabs = [{
-        title: 'One',
+        title: 'My Gratitubes',
         url: 'one.tpl.html'
     }, {
-        title: 'Two',
+        title: 'Good news',
         url: 'two.tpl.html'
     }, {
-        title: 'Three',
+        title: 'Trending',
         url: 'three.tpl.html'
     }];
 
