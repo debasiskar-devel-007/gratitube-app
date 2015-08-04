@@ -26,6 +26,15 @@
 
 }
 
+a{ border:none!important;}
+a:focus{ border:none!important;}
+a:visited{ border:none!important;}
+
+button{ border:none!important;}
+button:focus{ border:none!important;}
+button:visited{ border:none!important;}
+
+
 .arrows button{ border: none; background: none;  display: block;
 
    }
@@ -33,11 +42,12 @@
 .arrowswrapper{ width: 99vw;   height:100vh;  display: table-cell; text-align: center; vertical-align: middle;}
 
 .btnprev{ float: left;  display: block; width: 26px;
-    height: 34px;}
+    height: 34px; z-index: 9999;}
 
  .btnnext{ float: right;  display: block; width: 26px;
-     height: 34px;}
+     height: 34px;  z-index: 9999;}
 
+ button {border:none!important;}
 
 
 .arrows img {

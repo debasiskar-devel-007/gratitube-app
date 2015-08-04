@@ -44,10 +44,7 @@ gartitube.config(function($stateProvider, $urlRouterProvider,$sceProvider,$sceDe
 
                 // the main template will be placed here (relatively named)
                 '': { templateUrl: 'index.html' },
-                'navigation': { templateUrl: ''
-                    //ontroller:'loader'
 
-                },
 
                 // the child views will be defined here (absolutely named)
                 'loader': { templateUrl: 'partials/loader.html' ,
@@ -73,10 +70,7 @@ gartitube.config(function($stateProvider, $urlRouterProvider,$sceProvider,$sceDe
 
                 // the main template will be placed here (relatively named)
                 '': { templateUrl: 'index.html' },
-                'navigation': { templateUrl: ''
-                    //ontroller:'loader'
 
-                },
 
                 // the child views will be defined here (absolutely named)
                 'loader': { templateUrl: 'partials/intro.html' ,
@@ -183,12 +177,14 @@ gartitube.controller('index', function($scope,$sce,$http,MyService,$cookieStore,
 
         $scope.username=angular.element( document.querySelector( '#username' )).val();
         $scope.deviceid=angular.element( document.querySelector( '#deviceid' )).val();
-        //alert($scope.username+'='+$scope.deviceid);
+        $scope.accessToken=angular.element( document.querySelector( '#accessToken' )).val();
+        alert($scope.username+'='+$scope.deviceid+"----");
         if( ($scope.username)!='' &&  ($scope.deviceid)!=''){
 
             $scope.userinfo={
                 username:$scope.username,
                 deviceid:$scope.deviceid
+               // accessToken:$scope.accessToken
 
             }
 
@@ -265,8 +261,9 @@ gartitube.controller('index', function($scope,$sce,$http,MyService,$cookieStore,
             //alert(2343);
 
             setTimeout(function(){
+
                 $state.go('intro');
-            },6000);
+            },3100);
         }
 
     }

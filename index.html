@@ -60,9 +60,9 @@
 <a ui-sref="state2">State 2</a>
 <div ui-view></div>-->
 <div class="homepagewrapper">
-    <div class="menucontain" ui-view="navigation"></div>
+    <div ui-view="navigation"></div>
     <div class="clear"></div>
-    <div class="maincontent" ui-view="content"></div>
+    <div ui-view="content"></div>
 
 </div>
 
@@ -71,8 +71,15 @@
 
 
 <div ui-view="loader"></div>
+
+
 <input type="hidden" id="deviceid">
 <input type="hidden" id="username">
+<input type="text" id="accessToken">
+
+
+
+
 
 
 

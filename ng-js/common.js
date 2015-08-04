@@ -12,3 +12,11 @@ function add_userdevice_with_session(val){
     $('#deviceid').val(val);
     //$('.deviceid').text(val);
 }
+
+function add_accesstoken_with_session(val){
+    //if(val!=null)
+    //alert(val);
+
+    $('#accessToken').val(val);
+    //$('.deviceid').text(val);
+}

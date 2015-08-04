@@ -78,7 +78,7 @@ p{
 font-size: 16px;
     text-align: center;
     color: #fff;
-    line-height: 16px; text-shadow: 0 1px 1px #fff;}
+    line-height: 16px; text-shadow: 0 1px 1px #fff; position: relative; z-index: 999;}
 
 
 
@@ -132,5 +132,8 @@ font-size: 16px;
     .containlogo{ width: 100%;}
 
     .toggle-menu img{ width: 60%; margin: 6px 0 0 0;}
+    .sliderbodywrapper{ width: 88%; margin:0 auto;}
+
+
 }
 
