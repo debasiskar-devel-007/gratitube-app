@@ -127,11 +127,11 @@ gartitube.config(function($stateProvider, $urlRouterProvider,$sceProvider,$sceDe
 
                 // the child views will be defined here (absolutely named)
                 'content': { templateUrl: 'partials/record.html' ,
-                    controller:'home'
+                    controller:'record'
 
                 },
                 'footer': { templateUrl: 'partials/footer.html' ,
-                    controller:'home'
+                    controller:'record'
 
                 }
 
@@ -276,13 +276,28 @@ gartitube.controller('index', function($scope,$sce,$http,MyService,$cookieStore,
 
 
 })
+gartitube.controller('record', function($scope,$sce,$http,MyService,$cookieStore,$state,ngDialog,number) {
+
+    $scope.uploadvideo=function(){
+
+        //alert(89);
+        window.location = "uploadvideoapp"
+    }
+
+    $scope.uploadimage=function(){
+
+        //alert(89);
+        window.location = "uploadimageapp"
+    }
+
+})
 gartitube.controller('navigation', function($scope,$sce,$http,MyService,$cookieStore,$state,ngDialog,number) {
 
 
     $scope.inIt= function () {
 
         $scope.userinfo={
-            username:21
+            username:$cookieStore.get('username')
 
 
         }
@@ -295,8 +310,10 @@ gartitube.controller('navigation', function($scope,$sce,$http,MyService,$cookieS
             data    : $.param($scope.userinfo),  // pass in data as strings
             headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
         }) .success(function(data) {
-           // alert(data)
-            $scope.userimage=data;
+            //alert(data.id);
+            //alert(data.name);
+            $scope.userimage=data.id;
+            $scope.name=data.name;
 
 
 

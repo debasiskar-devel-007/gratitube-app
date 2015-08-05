@@ -78,7 +78,7 @@ body {
   top: 0;
   right: 0;
   bottom: 0;
-  z-index: 600;
+  z-index: 999!important;
 }
 .lateral-slide-menu-main-page {
   -webkit-transition: -webkit-transform 192ms cubic-bezier(0.2, 0.3, 0.25, 0.9);
@@ -93,6 +93,7 @@ body {
   left: 0;
   bottom: 0;
   outline: none;
+  z-index: 999!important;
 }
 .lateral-slide-menu-in-transition {
   overflow: hidden;
