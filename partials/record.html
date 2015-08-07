@@ -1,3 +1,4 @@
+
 <div id="menu" class="menucontain">
     <table border="0" cellpadding="0" cellspacing="0" style="width: 98%; height: 70px; margin: 0 auto; padding: 0 1%">
         <tr>
@@ -19,15 +20,20 @@
 
 <div class="maincontent">
 
+    <form ng-submit="saveRecord()">
+
     <div class="recordwrapper">
 
-    <div class="recordimg">
-        <img src="./ng-images/pic3.png" alt="#" />
-
-
+    <div class="recordimg" style="opacity: 1;">
+        <img ng-if="!filename" src="./ng-images/pic3.png" alt="#" style="opacity: 0.5;" />
+        <img ng-if="filename && filetype=='image'" src="http://torqkd.com/uploads/video1/images/{{filename}}.jpg" alt="#" />
+        <videogular ng-if="filename  && filetype=='video'" ng-init="vidsources = [{src: ('http://torqkd.com/uploads/video1/'+filename+'.mp4'), type: 'video/mp4'}]">
+            <vg-media vg-src="vidsources" vg-native-controls="true" ></vg-media>
+            <vg-poster vg-url="'http://torqkd.com/uploads/video1/thumb/{{filename}}.jpg'"></vg-poster>
+        </videogular>
     </div>
 
-        <div class="record-menu">
+        <div class="record-menu" ng-show="!filename">
 
             <ul>
                 <li><a ng-click="uploadvideo()" href="javascript:void(0)" >Record a Video</a> </li>
@@ -42,7 +48,7 @@
 
 
     <div class="recordbody">
-
+<!--
       <h2 class="activerecord"> Title &  Massage</h2>
        <div class="textcon">
            <label>Title</label>
@@ -58,7 +64,7 @@
 
         <h2> Privacy</h2>
         <div class="textcon">
-            <input type="radio"><span>Pablice</span>
+            <input type="radio"><span>Public</span>
             <input type="radio"><span>Private</span>
 
 
@@ -66,7 +72,7 @@
 
 
         <h2> Select Recipient</h2>
-
+-->
   <input type="submit" value="Submit" class="recoresubmit">
 
 
@@ -74,5 +80,5 @@
         <!----->
     </div>
 
-
+</form>
     </div>

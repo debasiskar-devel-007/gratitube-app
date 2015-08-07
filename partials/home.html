@@ -33,10 +33,15 @@
             <div class="MyGratitubes-contain">
 
 
-                <div class="MyGratitubes-block">
-                    <a href="#">
-                    <img src="./ng-images/pic1.png" alt="#"  class="proimg"/>
-                    <label>
+                <div class="MyGratitubes-block" ng-repeat="item in fileList">
+                    <a href="javascript:void(0);">
+                    <!--<img src="./ng-images/pic1.png" alt="#"  class="proimg" style="max-height: 160px;" />-->
+                    <img ng-if="item.filetype=='image'" src="http://torqkd.com/uploads/video1/images/{{item.filename}}.jpg" alt="#"  class="proimg" style="max-height: 160px;" ng-click="showFile(item)" />
+                    <spam class="videoplay"><img ng-if="item.filetype=='video'" src="http://torqkd.com/uploads/video1/thumb/{{item.filename}}.jpg" alt="#"  class="proimg " style="max-height: 160px;" ng-click="showFile(item)" /></spam>
+
+
+
+                        <label>
                         <strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </strong>
 
                         <br/>   <br/>

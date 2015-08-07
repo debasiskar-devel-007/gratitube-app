@@ -20,9 +20,9 @@
 .arrows {
 
 
-    width: 98vw;   height:100vh;
 
     position: absolute;
+    display: none;
 
 }
 
@@ -39,12 +39,12 @@ button:visited{ border:none!important;}
 
    }
 
-.arrowswrapper{ width: 99vw;   height:100vh;  display: table-cell; text-align: center; vertical-align: middle;}
+.arrowswrapper{   display: table-cell; text-align: center; vertical-align: middle;}
 
 .btnprev{ float: left;  display: block; width: 26px;
     height: 34px; z-index: 9999;}
 
- .btnnext{ float: right;  display: block; width: 26px;
+ .btnnext{ float: right;  display: block; width: 34px;
      height: 34px;  z-index: 9999;}
 
  button {border:none!important;}

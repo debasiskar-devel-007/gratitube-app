@@ -1,25 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72d28325-971e-4fe5-8e9f-e79750524f1b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ng-images/arrow_active.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ng-images/record.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ng-images/trbtn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/common.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/upload.php" />
+    <list default="true" id="b8d36d42-9180-4c99-8635-5e69d41d310c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ng-images/playbtn.png" />
+      <change type="DELETED" beforePath="Y:\gratitube-app\.idea\.name" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ng-js/app.js" afterPath="$PROJECT_DIR$/ng-js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/footer.html" afterPath="$PROJECT_DIR$/partials/footer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gratitube-app.iml" afterPath="$PROJECT_DIR$/.idea/gratitube-app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/home.html" afterPath="$PROJECT_DIR$/partials/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/navigation.html" afterPath="$PROJECT_DIR$/partials/navigation.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/record.html" afterPath="$PROJECT_DIR$/partials/record.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ng-css/slider.css" afterPath="$PROJECT_DIR$/ng-css/slider.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/slider1.html" afterPath="$PROJECT_DIR$/partials/slider1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/slider2.html" afterPath="$PROJECT_DIR$/partials/slider2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/slider3.html" afterPath="$PROJECT_DIR$/partials/slider3.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/slider4.html" afterPath="$PROJECT_DIR$/partials/slider4.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/slider5.html" afterPath="$PROJECT_DIR$/partials/slider5.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ng-css/style.css" afterPath="$PROJECT_DIR$/ng-css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ng-css/theme-medium.css" afterPath="$PROJECT_DIR$/ng-css/theme-medium.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="gratitube-app.iws" />
     <ignored path=".idea/workspace.xml" />
-    <ignored path=".idea/dataSources.local.xml" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,152 +35,123 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="gratitube-app" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ng-js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="289" column="41" selection-start-line="289" selection-start-column="27" selection-end-line="289" selection-end-column="41" />
+            <state line="366" column="23" selection-start="8899" selection-end="8899" vertical-scroll-proportion="0.5587583" vertical-offset="5970" max-vertical-offset="12121">
               <folding>
-                <element signature="e#0#41#0" expanded="false" />
+                <marker date="1438957665879" expanded="true" signature="10970:10977" placeholder="..." />
+                <marker date="1438957665879" expanded="true" signature="11062:11227" placeholder="..." />
+                <marker date="1438957665879" expanded="true" signature="11062:11227" placeholder="..." />
+                <marker date="1438957665879" expanded="true" signature="11062:11141" placeholder="..." />
+                <marker date="1438957665879" expanded="true" signature="11062:11141" placeholder="..." />
+                <marker date="1438957665879" expanded="true" signature="11062:11099" placeholder="..." />
+                <marker date="1438957665879" expanded="true" signature="11062:11099" placeholder="..." />
+                <marker date="1438957665879" expanded="true" signature="11062:11099" placeholder="..." />
+                <marker date="1438957665879" expanded="true" signature="11062:11265" placeholder="..." />
+                <marker date="1438957665879" expanded="true" signature="11062:11306" placeholder="..." />
+                <marker date="1438957665879" expanded="true" signature="11062:11106" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ngmodule.module" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Temp/scp00360/home/influxiq/public_html/admingratitube/sites/all/modules/ngmodule/ngmodule.module">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.8461537">
-              <caret line="644" column="26" selection-start-line="644" selection-start-column="26" selection-end-line="644" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="upload.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/upload.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6904762">
-              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-              <folding>
-                <element signature="e#6#92#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ng-js/common.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/partials/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.2363636">
-              <caret line="4" column="112" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="112" />
-              <folding>
-                <element signature="n#style#0;n#table#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#script#1;n#div#1;n#!!top" expanded="false" />
-                <element signature="n#script#2;n#div#1;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ng-css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.448276">
-              <caret line="183" column="38" selection-start-line="183" selection-start-column="38" selection-end-line="183" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="footer.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="footer.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/partials/footer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.807693">
-              <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+            <state line="4" column="83" selection-start="229" selection-end="229" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="357">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="record.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="record.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/partials/record.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.038462">
-              <caret line="33" column="70" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="70" />
+            <state line="22" column="31" selection-start="778" selection-end="788" vertical-scroll-proportion="-4.8846154" vertical-offset="247" max-vertical-offset="1513">
               <folding>
                 <element signature="n#style#0;n#table#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#div#0;n#div#0;n#div#1;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/partials/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="20" selection-start="1436" selection-end="1640" vertical-scroll-proportion="-9.807693" vertical-offset="408" max-vertical-offset="1479">
+              <folding>
+                <marker date="1438956396658" expanded="true" signature="1123:2280" placeholder="..." />
+                <marker date="1438956396658" expanded="true" signature="1170:2262" placeholder="..." />
+                <marker date="1438956396658" expanded="true" signature="1250:2242" placeholder="..." />
+                <marker date="1438956396658" expanded="true" signature="1301:2172" placeholder="..." />
+                <marker date="1438956396658" expanded="true" signature="1571:1589" placeholder="..." />
+                <marker date="1438956396658" expanded="true" signature="1799:1817" placeholder="..." />
+                <marker date="1438956396658" expanded="true" signature="1888:2146" placeholder="..." />
+                <marker date="1438956396658" expanded="true" signature="2390:2600" placeholder="..." />
+                <marker date="1438956396658" expanded="true" signature="2714:3060" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ng-css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="174" column="63" selection-start="6527" selection-end="6527" vertical-scroll-proportion="-14.96" vertical-offset="2584" max-vertical-offset="3757">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="intro.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/partials/intro.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="40" selection-start="138" selection-end="170" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="306">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="CSS File" />
-        <option value="JavaScript File" />
-        <option value="Html5" />
-      </list>
-    </option>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="PUSH_TAGS">
-      <GitPushTagMode />
-    </option>
   </component>
   <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
+    <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/index1.html" />
-        <option value="$USER_HOME$/Downloads/ng-img-crop.js" />
-        <option value="$PROJECT_DIR$/ng-js/intro.html" />
-        <option value="$PROJECT_DIR$/ng-css/media.css" />
-        <option value="$PROJECT_DIR$/partials/slider.html" />
-        <option value="$USER_HOME$/AppData/Local/Temp/scp24640/home/influxiq/public_html/admingratitube/sites/all/modules/ngmodule/ngmodule.module" />
-        <option value="$USER_HOME$/AppData/Local/Temp/scp36436/home/influxiq/public_html/admingratitube/sites/all/modules/ngmodule/ngmodule.module" />
-        <option value="$PROJECT_DIR$/partials/loader.html" />
-        <option value="$PROJECT_DIR$/partials/loader2.html" />
-        <option value="$PROJECT_DIR$/partials/intro.html" />
+        <option value="D:/xampp/htdocs/torqkd/protected/modules/user/controllers/AjsController.php" />
+        <option value="$PROJECT_DIR$/partials/slider5.html" />
+        <option value="$PROJECT_DIR$/partials/slider4.html" />
         <option value="$PROJECT_DIR$/partials/slider3.html" />
         <option value="$PROJECT_DIR$/partials/slider2.html" />
         <option value="$PROJECT_DIR$/partials/slider1.html" />
-        <option value="$PROJECT_DIR$/partials/slider4.html" />
-        <option value="$PROJECT_DIR$/partials/slider5.html" />
-        <option value="$PROJECT_DIR$/ng-css/slider.css" />
         <option value="$PROJECT_DIR$/ng-js/common.js" />
+        <option value="$PROJECT_DIR$/ng-css/slider.css" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$USER_HOME$/AppData/Local/Temp/scp29415/home/influxiq/public_html/admingratitube/sites/all/modules/ngmodule/ngmodule.module" />
-        <option value="$PROJECT_DIR$/partials/navigation.html" />
-        <option value="$PROJECT_DIR$/partials/home.html" />
-        <option value="$PROJECT_DIR$/ng-css/theme-medium.css" />
-        <option value="$PROJECT_DIR$/partials/footer.html" />
-        <option value="$PROJECT_DIR$/ng-css/style.css" />
-        <option value="$USER_HOME$/AppData/Local/Temp/scp00360/home/influxiq/public_html/admingratitube/sites/all/modules/ngmodule/ngmodule.module" />
-        <option value="$PROJECT_DIR$/upload.php" />
+        <option value="$PROJECT_DIR$/ng-css/videogular.css" />
         <option value="$PROJECT_DIR$/partials/record.html" />
+        <option value="$PROJECT_DIR$/ng-css/style.css" />
+        <option value="$PROJECT_DIR$/partials/home.html" />
+        <option value="$PROJECT_DIR$/partials/footer.html" />
         <option value="$PROJECT_DIR$/ng-js/app.js" />
       </list>
     </option>
@@ -184,12 +160,6 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
   </component>
-  <component name="NamedScopeManager">
-    <order />
-  </component>
-  <component name="PhpServers">
-    <servers />
-  </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
@@ -197,18 +167,21 @@
     <option name="width" value="1616" />
     <option name="height" value="876" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -220,6 +193,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -235,20 +209,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="gratitube-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gratitube-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gratitube-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uploads" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -290,20 +250,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ng-images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gratitube-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gratitube-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="ng-css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -311,200 +257,71 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="FullScreen" value="false" />
+    <property name="SearchEverywhereHistory" value="" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\xampp\htdocs\gratitube-app\uploads" />
-      <recent name="F:\xampp\htdocs\gratitube-app\ng-images" />
-      <recent name="F:\xampp\htdocs\gratitube-app\ng-js" />
-      <recent name="F:\xampp\htdocs\gratitube-app" />
-      <recent name="F:\xampp\htdocs\gratitube-app\ng-css" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\xampp\htdocs\gratitube-app" />
-      <recent name="F:\xampp\htdocs\gratitube-app\ng-css" />
-      <recent name="F:\xampp\htdocs\gratitube-app\partials" />
-      <recent name="F:\xampp\htdocs\gratitube-app\ng-js" />
+      <recent name="Y:\gratitube-app\ng-images" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
-      <BehatRunner />
       <method />
     </configuration>
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
     <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <pass-parent-envs>true</pass-parent-envs>
-      <envs />
-      <method />
-    </configuration>
+    <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="72d28325-971e-4fe5-8e9f-e79750524f1b" name="Default" comment="" />
-      <created>1437714608082</created>
-      <option name="number" value="Default" />
-      <updated>1437714608082</updated>
+      <changelist id="b8d36d42-9180-4c99-8635-5e69d41d310c" name="Default" comment="" />
+      <created>1438777779310</created>
+      <updated>1438777779310</updated>
     </task>
-    <task id="LOCAL-00001" summary="11.06 AM 29 th july">
-      <created>1438148217469</created>
-      <option name="number" value="00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1438148217469</updated>
-    </task>
-    <task id="LOCAL-00002" summary="11.06 AM 29 th july">
-      <created>1438164455384</created>
-      <option name="number" value="00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1438164455384</updated>
-    </task>
-    <task id="LOCAL-00003" summary="11.06 AM 29 th july">
-      <created>1438178194116</created>
-      <option name="number" value="00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1438178194116</updated>
-    </task>
-    <task id="LOCAL-00004" summary="5.06 AM 30 th july">
-      <created>1438256069554</created>
-      <option name="number" value="00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1438256069554</updated>
-    </task>
-    <task id="LOCAL-00005" summary="8.06 PM 30 th july">
-      <created>1438263703524</created>
-      <option name="number" value="00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1438263703525</updated>
-    </task>
-    <task id="LOCAL-00006" summary="11.05 AM 31 st july">
-      <created>1438320919356</created>
-      <option name="number" value="00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1438320919356</updated>
-    </task>
-    <task id="LOCAL-00007" summary="12.45 AM 31 st july">
-      <created>1438326396791</created>
-      <option name="number" value="00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1438326396791</updated>
-    </task>
-    <task id="LOCAL-00008" summary="2.45 PM 31 st july">
-      <created>1438332609685</created>
-      <option name="number" value="00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1438332609685</updated>
-    </task>
-    <task id="LOCAL-00009" summary="3.45 PM 31 st july">
-      <created>1438334979597</created>
-      <option name="number" value="00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1438334979597</updated>
-    </task>
-    <task id="LOCAL-00010" summary="4.45 PM 31 st july">
-      <created>1438340580866</created>
-      <option name="number" value="00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1438340580866</updated>
-    </task>
-    <task id="LOCAL-00011" summary="6.45 PM 31 st july">
-      <created>1438347521201</created>
-      <option name="number" value="00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1438347521201</updated>
-    </task>
-    <task id="LOCAL-00012" summary="6.45 PM 31 st july">
-      <created>1438349564376</created>
-      <option name="number" value="00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1438349564376</updated>
-    </task>
-    <task id="LOCAL-00013" summary="6.45 PM 31 st july">
-      <created>1438350122873</created>
-      <option name="number" value="00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1438350122873</updated>
-    </task>
-    <task id="LOCAL-00014" summary="6.45 PM 1 st august">
-      <created>1438609147124</created>
-      <option name="number" value="00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1438609147124</updated>
-    </task>
-    <task id="LOCAL-00015" summary="6.45 PM 2nd august">
-      <created>1438686756340</created>
-      <option name="number" value="00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1438686756340</updated>
-    </task>
-    <task id="LOCAL-00016" summary="6.45 PM 4th august">
-      <created>1438694071995</created>
-      <option name="number" value="00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1438694071995</updated>
-    </task>
-    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3294271" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294271" sideWeight="0.505" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294271" sideWeight="0.495" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294271" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
-      <collection />
-    </option>
-    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
       <collection />
     </option>
   </component>
@@ -512,429 +329,203 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="11.06 AM 29 th july" />
-    <MESSAGE value="5.06 AM 30 th july" />
-    <MESSAGE value="8.06 PM 30 th july" />
-    <MESSAGE value="11.05 AM 31 st july" />
-    <MESSAGE value="12.45 AM 31 st july" />
-    <MESSAGE value="2.45 PM 31 st july" />
-    <MESSAGE value="3.45 PM 31 st july" />
-    <MESSAGE value="4.45 PM 31 st july" />
-    <MESSAGE value="6.45 PM 31 st july" />
-    <MESSAGE value="6.45 PM 1 st august" />
-    <MESSAGE value="6.45 PM 2nd august" />
-    <MESSAGE value="6.45 PM 4th august" />
-    <option name="LAST_COMMIT_MESSAGE" value="6.45 PM 4th august" />
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="1" />
-    </breakpoint-manager>
-    <watches-manager />
+    <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ng-js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="9758">
           <folding>
-            <element signature="e#0#41#0" expanded="false" />
+            <marker date="1438957665879" expanded="true" signature="10970:10977" placeholder="..." />
+            <marker date="1438957665879" expanded="true" signature="11062:11227" placeholder="..." />
+            <marker date="1438957665879" expanded="true" signature="11062:11227" placeholder="..." />
+            <marker date="1438957665879" expanded="true" signature="11062:11141" placeholder="..." />
+            <marker date="1438957665879" expanded="true" signature="11062:11141" placeholder="..." />
+            <marker date="1438957665879" expanded="true" signature="11062:11099" placeholder="..." />
+            <marker date="1438957665879" expanded="true" signature="11062:11099" placeholder="..." />
+            <marker date="1438957665879" expanded="true" signature="11062:11099" placeholder="..." />
+            <marker date="1438957665879" expanded="true" signature="11062:11265" placeholder="..." />
+            <marker date="1438957665879" expanded="true" signature="11062:11306" placeholder="..." />
+            <marker date="1438957665879" expanded="true" signature="11062:11106" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/xampp/htdocs/torqkd/protected/modules/user/controllers/AjsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3905" column="37" selection-start="122203" selection-end="122214" vertical-scroll-proportion="0.107669614" vertical-offset="66312" max-vertical-offset="82518">
+          <folding>
+            <marker date="1438934773073" expanded="true" signature="-1:-1" placeholder="select perso..sport..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partials/slider.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="489">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/partials/slider5.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="39" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="28" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ng-js/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/slider.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/slider1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ng-js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="157" column="15" selection-start-line="157" selection-start-column="15" selection-end-line="157" selection-end-column="15" />
+        <state line="9" column="16" selection-start="183" selection-end="183" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="561">
           <folding>
-            <element signature="e#0#41#0" expanded="false" />
+            <element signature="n#style#0;n#P#1;n#div#0;n#div#0;n#!!top" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/slider5.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/slider.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/slider1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ng-js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="99" column="8" selection-start-line="99" selection-start-column="8" selection-end-line="99" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ng-css/ngDialog-theme-default.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ng-css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/slider.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/slider1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/loader.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/intro.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/ng-img-crop.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="0" column="4945" selection-start-line="0" selection-start-column="4943" selection-end-line="0" selection-end-column="4945" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ng-js/angular-sanitize.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ng-css/ngDialog-theme-default.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ng-js/angular-mobile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ng-js/angular.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ng-js/ng-mobile-menu.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ng-js/ng-mobile-menu.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ng-css/ng-mobile-menu.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/topcoat/css/topcoat-mobile-light.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ng-js/angular-ap-lateral-slide-menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/loader2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/slider.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="19" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/intro.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9615384">
-          <caret line="3" column="29" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/slider3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.423077">
-          <caret line="19" column="94" selection-start-line="19" selection-start-column="94" selection-end-line="19" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/slider2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/partials/slider4.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1923075">
-          <caret line="11" column="46" selection-start-line="5" selection-start-column="11" selection-end-line="11" selection-end-column="46" />
+        <state line="21" column="125" selection-start="513" selection-end="523" vertical-scroll-proportion="-7.8461537" vertical-offset="153" max-vertical-offset="1003">
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partials/slider3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="94" selection-start="469" selection-end="481" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="527">
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partials/slider2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="102" selection-start="475" selection-end="475" vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="510">
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ng-css/theme-medium.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3247">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/partials/slider1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/slider5.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+        <state line="20" column="82" selection-start="656" selection-end="656" vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="544">
           <folding>
-            <element signature="n#style#0;n#P#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/loader.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2692308">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.1454544">
-          <caret line="27" column="31" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ng-js/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/navigation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.709091">
-          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding>
-            <element signature="n#ul#0;n#lateral-slide-menu#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ng-css/slider.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+        <state line="36" column="0" selection-start="507" selection-end="507" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="1411">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ng-css/theme-medium.css">
+    <entry file="file://$PROJECT_DIR$/ng-js/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19736843">
-          <caret line="78" column="11" selection-start-line="78" selection-start-column="11" selection-end-line="78" selection-end-column="11" />
+        <state line="14" column="0" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/partials/home.html">
+    <entry file="file://$PROJECT_DIR$/ng-css/videogular.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.2363636">
-          <caret line="4" column="112" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="112" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#script#1;n#div#1;n#!!top" expanded="false" />
-            <element signature="n#script#2;n#div#1;n#!!top" expanded="false" />
-          </folding>
+        <state line="76" column="17" selection-start="2200" selection-end="2200" vertical-scroll-proportion="0.0" vertical-offset="1134" max-vertical-offset="7208">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/partials/footer.html">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.807693">
-          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        <state line="10" column="24" selection-start="318" selection-end="318" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="1632">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partials/intro.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="40" selection-start="138" selection-end="170" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="306">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ng-css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.448276">
-          <caret line="183" column="38" selection-start-line="183" selection-start-column="38" selection-end-line="183" selection-end-column="38" />
+        <state line="174" column="63" selection-start="6527" selection-end="6527" vertical-scroll-proportion="-14.96" vertical-offset="2584" max-vertical-offset="3757">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp00360/home/influxiq/public_html/admingratitube/sites/all/modules/ngmodule/ngmodule.module">
+    <entry file="file://$PROJECT_DIR$/partials/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537">
-          <caret line="644" column="26" selection-start-line="644" selection-start-column="26" selection-end-line="644" selection-end-column="26" />
-          <folding />
+        <state line="39" column="20" selection-start="1436" selection-end="1640" vertical-scroll-proportion="-9.807693" vertical-offset="408" max-vertical-offset="1479">
+          <folding>
+            <marker date="1438956396658" expanded="true" signature="1123:2280" placeholder="..." />
+            <marker date="1438956396658" expanded="true" signature="1170:2262" placeholder="..." />
+            <marker date="1438956396658" expanded="true" signature="1250:2242" placeholder="..." />
+            <marker date="1438956396658" expanded="true" signature="1301:2172" placeholder="..." />
+            <marker date="1438956396658" expanded="true" signature="1571:1589" placeholder="..." />
+            <marker date="1438956396658" expanded="true" signature="1799:1817" placeholder="..." />
+            <marker date="1438956396658" expanded="true" signature="1888:2146" placeholder="..." />
+            <marker date="1438956396658" expanded="true" signature="2390:2600" placeholder="..." />
+            <marker date="1438956396658" expanded="true" signature="2714:3060" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/uploads/common.js">
+    <entry file="file://$PROJECT_DIR$/partials/footer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state line="4" column="83" selection-start="229" selection-end="229" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="357">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/partials/record.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.038462">
-          <caret line="33" column="70" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="70" />
+        <state line="22" column="31" selection-start="778" selection-end="788" vertical-scroll-proportion="-4.8846154" vertical-offset="247" max-vertical-offset="1513">
           <folding>
             <element signature="n#style#0;n#table#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#div#0;n#div#0;n#div#1;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ng-js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="289" column="41" selection-start-line="289" selection-start-column="27" selection-end-line="289" selection-end-column="41" />
+        <state line="366" column="23" selection-start="8899" selection-end="8899" vertical-scroll-proportion="0.5587583" vertical-offset="5970" max-vertical-offset="12121">
           <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/upload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6904762">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#92#0#PHP" expanded="true" />
+            <marker date="1438957665879" expanded="true" signature="10970:10977" placeholder="..." />
+            <marker date="1438957665879" expanded="true" signature="11062:11227" placeholder="..." />
+            <marker date="1438957665879" expanded="true" signature="11062:11227" placeholder="..." />
+            <marker date="1438957665879" expanded="true" signature="11062:11141" placeholder="..." />
+            <marker date="1438957665879" expanded="true" signature="11062:11141" placeholder="..." />
+            <marker date="1438957665879" expanded="true" signature="11062:11099" placeholder="..." />
+            <marker date="1438957665879" expanded="true" signature="11062:11099" placeholder="..." />
+            <marker date="1438957665879" expanded="true" signature="11062:11099" placeholder="..." />
+            <marker date="1438957665879" expanded="true" signature="11062:11265" placeholder="..." />
+            <marker date="1438957665879" expanded="true" signature="11062:11306" placeholder="..." />
+            <marker date="1438957665879" expanded="true" signature="11062:11106" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
   </component>
 </project>
+

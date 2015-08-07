@@ -14,7 +14,8 @@ var gartitube = angular.module('gartitube', [
     'ngCookies',
     'ngDialog',
     'ngSanitize',
-    'ap.lateralSlideMenu'
+    'ap.lateralSlideMenu',
+    'com.2fdevs.videogular'
     // 'homeControllers'
 ]);
 
@@ -169,6 +170,33 @@ gartitube.service('number',  function() {
 gartitube.controller('index', function($scope,$sce,$http,MyService,$cookieStore,$state,ngDialog) {
 
 
+    if(typeof($cookieStore.get('recordFile')) != 'undefined'){
+
+        var dialog1 = ngDialog.open({
+            template: '<div><div>Processing...</div><div>',
+            plain: true,
+            //showClose:false,
+            scope:$scope
+        });
+
+        setTimeout(function(){
+            dialog1.close();
+            $state.go('record');
+            return;
+        },5000);
+
+    }
+
+    var winh = $(window).height();
+    var winw = $(window).width();
+
+    $('.introbody').css('height',winh);
+    $('.introbody').css('width',winw);
+
+    $('.sliderbody').css('height',winh);
+    $('.sliderbody').css('width',winw);
+
+
 
     $scope.init=function(){
 
@@ -206,6 +234,7 @@ gartitube.controller('index', function($scope,$sce,$http,MyService,$cookieStore,
                     angular.element( document.querySelector( '#username' )).val('');
                     angular.element( document.querySelector( '#deviceid' )).val('');
                     $state.go('home');
+                    return;
                 }
                 else{
                     $cookieStore.put('loginfail','yes')
@@ -216,6 +245,7 @@ gartitube.controller('index', function($scope,$sce,$http,MyService,$cookieStore,
                         scope:$scope
                     });
                     $state.go('intro');
+                    return;
 
                 }
 
@@ -232,7 +262,18 @@ gartitube.controller('index', function($scope,$sce,$http,MyService,$cookieStore,
             $scope.redirect();
         }
 
+/*        setTimeout(function(){
+            var winh = $(window).height();
+            var winw = $(window).width();
 
+            $('.introbody').css('height',winh);
+            $('.introbody').css('width',winw);
+
+            $('.sliderbody').css('height',winh);
+            $('.sliderbody').css('width',winw);
+
+        },1000);
+*/
 
 
     };
@@ -258,6 +299,7 @@ gartitube.controller('index', function($scope,$sce,$http,MyService,$cookieStore,
             angular.element( document.querySelector( '#username' )).val('');
             angular.element( document.querySelector( '#deviceid' )).val('');
             $state.go('home');
+            return;
         }else{
             //alert(2343);
            /* setTimeInterval(function(){
@@ -269,6 +311,7 @@ gartitube.controller('index', function($scope,$sce,$http,MyService,$cookieStore,
             setTimeout(function(){
 
                 $state.go('intro');
+                return;
             },3100);
         }
 
@@ -278,16 +321,51 @@ gartitube.controller('index', function($scope,$sce,$http,MyService,$cookieStore,
 })
 gartitube.controller('record', function($scope,$sce,$http,MyService,$cookieStore,$state,ngDialog,number) {
 
+    $scope.filename = '';
+    $scope.filetype = '';
+
+
+    if(typeof($cookieStore.get('recordFile')) != 'undefined'){
+
+        $http({
+            method  : 'POST',
+            async:   false,
+            url     : 'http://admin.gratitube.influxiq.com/?q=ngmodule/gettempfile',
+            data    : $.param({'username':$cookieStore.get('username')}),  // pass in data as strings
+            headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
+        }) .success(function(data) {
+
+            $scope.filename = data.filename;
+            $scope.filetype = data.filetype;
+
+
+
+            $cookieStore.remove('recordFile');
+
+        });
+
+
+
+    }
+
+
     $scope.uploadvideo=function(){
 
         //alert(89);
+        $cookieStore.put('recordFile',1);
         window.location = "uploadvideoapp"
     }
 
     $scope.uploadimage=function(){
 
         //alert(89);
+        $cookieStore.put('recordFile',1);
         window.location = "uploadimageapp"
+    }
+
+    $scope.saveRecord = function(){
+        $state.go('home');
+        return;
     }
 
 })
@@ -335,6 +413,8 @@ gartitube.controller('home', function($scope,$sce,$http,MyService,$cookieStore,$
 
     //alert($cookieStore.get('username'));
 
+    $scope.fileList = [];
+
     $scope.tabs = [{
         title: 'My Gratitubes',
         url: 'one.tpl.html'
@@ -355,6 +435,40 @@ gartitube.controller('home', function($scope,$sce,$http,MyService,$cookieStore,$
     $scope.isActiveTab = function(tabUrl) {
         return tabUrl == $scope.currentTab;
     }
+
+    $http({
+        method  : 'POST',
+        async:   false,
+        url     : 'http://admin.gratitube.influxiq.com/?q=ngmodule/getallfile'
+//        data    : $.param({'username':0}),  // pass in data as strings
+  //      headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
+    }) .success(function(result) {
+
+        $scope.fileList = result;
+
+    });
+
+    $scope.showFile = function(item){
+        var hhh = '';
+        if(item.filetype == 'image'){
+            hhh = '<img src="http://torqkd.com/uploads/video1/images/'+item.filename+'.jpg" alt="#" style="width: 100%;" />';
+        }
+        if(item.filetype == 'video'){
+            hhh = '<videogular>\
+                <vg-media vg-src="[{src: (\'http://torqkd.com/uploads/video1/'+item.filename+'.mp4\'), type: \'video/mp4\'}]" vg-native-controls="true" ></vg-media>\
+                <vg-poster vg-url="\'http://torqkd.com/uploads/video1/thumb/'+item.filename+'.jpg\'"></vg-poster>\
+            </videogular>';
+        }
+
+
+        $scope.dialog1 = ngDialog.open({
+            template: '<div>'+hhh+'<div>',
+            plain: true,
+            showClose:false,
+            scope:$scope
+        });
+    }
+
 })
 
 gartitube.controller('loader', function($scope,$sce,$http,MyService,$cookieStore,$state,ngDialog) {
@@ -390,6 +504,7 @@ gartitube.controller('loader', function($scope,$sce,$http,MyService,$cookieStore
                     $cookieStore.put('username',data);
                     alert(data);
                     $state.go('home');
+                    return;
                 }
                 else{
                     $cookieStore.put('loginfail','yes')
@@ -400,6 +515,7 @@ gartitube.controller('loader', function($scope,$sce,$http,MyService,$cookieStore
                         scope:$scope
                     });
                     $state.go('intro');
+                    return;
 
                 }
 
@@ -413,7 +529,30 @@ gartitube.controller('loader', function($scope,$sce,$http,MyService,$cookieStore
 
         }
 
+
+
     };
+
+    setTimeout(function(){
+        var winh = $(window).height();
+        var winw = $(window).width();
+
+        $('.introbody').css('height',winh);
+        $('.introbody').css('width',winw);
+
+        $('.sliderbody').css('height',winh);
+        $('.sliderbody').css('width',winw);
+
+
+        $('.arrows').css('height',winh);
+        $('.arrows').css('width',winw);
+
+        $('.arrowswrapper').css('height',winh);
+        $('.arrowswrapper').css('width',winw);
+
+        $('.arrows').css('display','block');
+
+    },1000);
 
     setTimeout(function(){
 
