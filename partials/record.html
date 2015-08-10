@@ -20,7 +20,7 @@
 
 <div class="maincontent">
 
-    <form ng-submit="saveRecord()">
+    <form ng-submit="sharegratitube()">
 
     <div class="recordwrapper">
 
@@ -48,32 +48,32 @@
 
 
     <div class="recordbody">
-<!--
-      <h2 class="activerecord"> Title &  Massage</h2>
-       <div class="textcon">
+
+      <h2 ng-click="showtitle = !showtitle" class="activerecord"> Title &  Massage</h2>
+       <div class="textcon" ng-init="showtitle = false" ng-show="showtitle">
            <label>Title</label>
-           <input type="text" class="recordinput">
+           <input type="text" id="title" class="recordinput">
 
            <label>Massage</label>
-           <textarea class="recordmassage"></textarea>
+           <textarea id="message" class="recordmassage"></textarea>
 
 
 
        </div>
 
 
-        <h2> Privacy</h2>
-        <div class="textcon">
+       <!-- <h2 ng-click="showoprivacy = !showoprivacy" > Privacy</h2>
+        <div class="textcon" ng-init="showoprivacy = false" ng-show="showoprivacy">
             <input type="radio"><span>Public</span>
             <input type="radio"><span>Private</span>
 
 
-        </div>
+        </div>-->
 
 
-        <h2> Select Recipient</h2>
--->
-  <input type="submit" value="Submit" class="recoresubmit">
+        <!--<h2> Select Recipient</h2>-->
+
+  <input type="submit" value="Share"  class="recoresubmit">
 
 
 

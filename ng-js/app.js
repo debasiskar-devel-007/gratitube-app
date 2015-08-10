@@ -324,6 +324,54 @@ gartitube.controller('record', function($scope,$sce,$http,MyService,$cookieStore
     $scope.filename = '';
     $scope.filetype = '';
 
+    $scope.sharegratitube=function(){
+        $scope.formsubmitflag=0;
+        //dialog1.close();
+        //dialog2.close();
+        ///alert(345);
+        $scope.title=angular.element( document.querySelector( '#title' )).val();
+        $scope.message=angular.element( document.querySelector( '#message' )).val();
+        if($scope.title.length<1) {
+            $scope.formsubmitflag=1;
+
+            var dialog1 = ngDialog.open({
+                template: '<div><div>Please Enter a Title</div><div>',
+                plain: true,
+                //showClose:false,
+                scope:$scope
+            });
+        }
+
+        if($scope.title.length<1) {
+            $scope.formsubmitflag=1;
+
+            var dialog2 = ngDialog.open({
+                template: '<div><div>Please Enter a Message</div><div>',
+                plain: true,
+                //showClose:false,
+                scope:$scope
+            });
+        }
+
+        if($scope.filename='') {
+            $scope.formsubmitflag=1;
+
+            var dialog2 = ngDialog.open({
+                template: '<div><div>Please Enter a Message</div><div>',
+                plain: true,
+                //showClose:false,
+                scope:$scope
+            });
+        }
+
+        if($scope.formsubmitflag==0 && $scope.filename!=''){
+            alert('form will get submitted');
+        }
+
+
+
+    }
+
 
     if(typeof($cookieStore.get('recordFile')) != 'undefined'){
 
