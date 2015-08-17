@@ -27,7 +27,7 @@
     <div class="recordimg" style="opacity: 1;">
         <img ng-if="!filename" src="./ng-images/pic3.png" alt="#" style="opacity: 0.5;" />
         <img ng-if="filename && filetype=='image'" src="http://torqkd.com/uploads/video1/images/{{filename}}.jpg" alt="#" />
-        <videogular ng-if="filename  && filetype=='video'" ng-init="vidsources = [{src: ('http://torqkd.com/uploads/video1/'+filename+'.mp4'), type: 'video/mp4'}]">
+        <videogular ng-if="filename  && filetype=='video'" ng-init="vidsources = [{src: ('http://torqkd.com/uploads/video1/converted/'+filename+'.mp4'), type: 'video/mp4'}]">
             <vg-media vg-src="vidsources" vg-native-controls="true" ></vg-media>
             <vg-poster vg-url="'http://torqkd.com/uploads/video1/thumb/{{filename}}.jpg'"></vg-poster>
         </videogular>
@@ -36,8 +36,9 @@
         <div class="record-menu" ng-show="!filename">
 
             <ul>
-                <li><a ng-click="uploadvideo()" href="javascript:void(0)" >Record a Video</a> </li>
-                <li><a href="javascript:void(0)" ng-click="uploadimage()" >Upload Video or Photo</a> </li>
+                <li><a ng-click="uploadvideo()" href="javascript:void(0)" >Upload  Photo</a> </li>
+                <li><a href="javascript:void(0)" ng-click="uploadimage()" >Upload  Video</a> </li>
+                <li><a href="javascript:void(0)" ng-click="uploadvideochoose()" >Record a Video </a> </li>
 
             </ul>
 

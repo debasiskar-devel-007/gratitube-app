@@ -143,6 +143,98 @@ gartitube.config(function($stateProvider, $urlRouterProvider,$sceProvider,$sceDe
 
     )
 
+
+
+        .state('friends',{
+            url:"/friends",
+
+
+            views: {
+
+                // the main template will be placed here (relatively named)
+                '': { templateUrl: 'index.html' },
+                /* 'navigation': { templateUrl: 'partials/navigation.html'
+                 //ontroller:'loader'
+
+                 },*/
+
+                // the child views will be defined here (absolutely named)
+                'content': { templateUrl: 'partials/friends.html' ,
+                    controller:'friends'
+
+                },
+                /*'footer': { templateUrl: 'partials/footer.html' ,
+                 controller:'record'
+
+                 }*/
+
+
+
+            }
+        }
+
+    )
+
+        .state('logout',{
+            url:"/logout",
+
+
+            views: {
+
+                // the main template will be placed here (relatively named)
+                '': { templateUrl: 'index.html' },
+               /* 'navigation': { templateUrl: 'partials/navigation.html'
+                    //ontroller:'loader'
+
+                },*/
+
+                // the child views will be defined here (absolutely named)
+                'content': { templateUrl: 'partials/home.html' ,
+                    controller:'logout'
+
+                },
+                /*'footer': { templateUrl: 'partials/footer.html' ,
+                    controller:'record'
+
+                }*/
+
+
+
+            }
+        }
+
+    )
+
+        .state('share',{
+            url:"/share",
+
+
+            views: {
+
+                // the main template will be placed here (relatively named)
+                '': { templateUrl: 'index.html' },
+                'navigation': { templateUrl: 'partials/navigation.html'
+                    //ontroller:'loader'
+
+                },
+
+                // the child views will be defined here (absolutely named)
+                'content': { templateUrl: 'partials/share.html' ,
+                    controller:'share'
+
+                },
+                'footer': { templateUrl: 'partials/footer.html' ,
+                    controller:'record'
+
+                }
+
+
+
+            }
+        }
+
+    )
+
 });
 
 
@@ -342,7 +434,7 @@ gartitube.controller('record', function($scope,$sce,$http,MyService,$cookieStore
             });
         }
 
-        if($scope.title.length<1) {
+        if($scope.message.length<1) {
             $scope.formsubmitflag=1;
 
             var dialog2 = ngDialog.open({
@@ -353,11 +445,11 @@ gartitube.controller('record', function($scope,$sce,$http,MyService,$cookieStore
             });
         }
 
-        if($scope.filename='') {
+        if($scope.filename=='') {
             $scope.formsubmitflag=1;
 
             var dialog2 = ngDialog.open({
-                template: '<div><div>Please Enter a Message</div><div>',
+                template: '<div><div>Upload file</div><div>',
                 plain: true,
                 //showClose:false,
                 scope:$scope
@@ -365,7 +457,28 @@ gartitube.controller('record', function($scope,$sce,$http,MyService,$cookieStore
         }
 
         if($scope.formsubmitflag==0 && $scope.filename!=''){
-            alert('form will get submitted');
+
+            var dialog1 = ngDialog.open({
+                template: '<div><div>Sharing...</div><div>',
+                plain: true,
+                //showClose:false,
+                scope:$scope
+            });
+
+            $http({
+                method  : 'POST',
+                async:   false,
+                url     : 'http://admin.gratitube.influxiq.com/?q=ngmodule/saveGratitube',
+                data    : $.param({'filename':$scope.filename,'filetype':$scope.filetype,'title':$scope.title,'message':$scope.message,'user_name':$cookieStore.get('username')}),  // pass in data as strings
+                headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
+            }) .success(function(data) {
+                dialog1.close();
+                $cookieStore.put('lastUpFileName',$scope.filename);
+                $cookieStore.put('lastUpFileType',$scope.filetype);
+                $cookieStore.put('lastUpFileTitle',$scope.title);
+
+                $state.go('share');
+            });
         }
 
 
@@ -397,11 +510,18 @@ gartitube.controller('record', function($scope,$sce,$http,MyService,$cookieStore
     }
 
 
+    $scope.uploadvideochoose=function(){
+
+        $cookieStore.put('recordFile',1);
+        window.location = "uploadvideoapp";
+    }
+
+
     $scope.uploadvideo=function(){
 
         //alert(89);
         $cookieStore.put('recordFile',1);
-        window.location = "uploadvideoapp"
+        window.location = "uploadvideochoose"
     }
 
     $scope.uploadimage=function(){
@@ -417,13 +537,68 @@ gartitube.controller('record', function($scope,$sce,$http,MyService,$cookieStore
     }
 
 })
+gartitube.controller('share', function($scope,$sce,$http,MyService,$cookieStore,$state,ngDialog,number) {
+
+    $scope.fbShare = function(){
+
+        var dialog1 = ngDialog.open({
+            template: '<div><div>Sharing...</div><div>',
+            plain: true,
+            //showClose:false,
+            scope:$scope
+        });
+
+        $http({
+            method  : 'POST',
+            async:   false,
+            url     : 'http://admin.gratitube.influxiq.com/?q=ngmodule/sharetofb',
+            data    : $.param({'filename':$cookieStore.get('lastUpFileName'),'filetype':$cookieStore.get('lastUpFileType'),'username':$cookieStore.get('username')}),  // pass in data as strings
+            headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
+        }) .success(function(data) {
+            dialog1.close();
+        });
+
+    }
+
+    $scope.emailShare = function(){
+        $scope.dialog2 = ngDialog.open({
+            template: '<div><input type="text" id="emailList" /><input type="button" ng-click="emailShare1()" value="send"><div>',
+            plain: true,
+            //showClose:false,
+            scope:$scope
+        });
+    }
+
+    $scope.emailShare1 = function(){
+        $scope.dialog2.close();
+
+        var dialog1 = ngDialog.open({
+            template: '<div><div>Sharing...</div><div>',
+            plain: true,
+            //showClose:false,
+            scope:$scope
+        });
+
+        $http({
+            method  : 'POST',
+            async:   false,
+            url     : 'http://admin.gratitube.influxiq.com/?q=ngmodule/sharetoemail',
+            data    : $.param({'userMail':$('#emailList').val(),'filename':$cookieStore.get('lastUpFileName'),'filetype':$cookieStore.get('lastUpFileType'),'filetitle':$cookieStore.get('lastUpFileTitle')}),  // pass in data as strings
+            headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
+        }) .success(function(data) {
+            dialog1.close();
+        });
+    }
+
+});
 gartitube.controller('navigation', function($scope,$sce,$http,MyService,$cookieStore,$state,ngDialog,number) {
 
 
     $scope.inIt= function () {
 
         $scope.userinfo={
-            username:$cookieStore.get('username')
+           // username:$cookieStore.get('username')
+            username:34
 
 
         }
@@ -440,6 +615,22 @@ gartitube.controller('navigation', function($scope,$sce,$http,MyService,$cookieS
             //alert(data.name);
             $scope.userimage=data.id;
             $scope.name=data.name;
+
+
+
+        });
+        $http({
+            method  : 'POST',
+            async:   false,
+            url     : 'http://admin.gratitube.influxiq.com/?q=ngmodule/getfriendinfo',
+            data    : $.param($scope.userinfo),  // pass in data as strings
+            headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
+        }) .success(function(data) {
+           // alert(angular.fromJson(data));
+            //console.log(data.summary['total_count']);
+            //alert(data.name);
+            $scope.friendno=data.summary['total_count'];
+            //$scope.name=data.name;
 
 
 
@@ -487,9 +678,9 @@ gartitube.controller('home', function($scope,$sce,$http,MyService,$cookieStore,$
     $http({
         method  : 'POST',
         async:   false,
-        url     : 'http://admin.gratitube.influxiq.com/?q=ngmodule/getallfile'
-//        data    : $.param({'username':0}),  // pass in data as strings
-  //      headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
+        url     : 'http://admin.gratitube.influxiq.com/?q=ngmodule/getallfile',
+        data    : $.param({'user_id':$cookieStore.get('username')}),  // pass in data as strings
+        headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
     }) .success(function(result) {
 
         $scope.fileList = result;
@@ -503,7 +694,7 @@ gartitube.controller('home', function($scope,$sce,$http,MyService,$cookieStore,$
         }
         if(item.filetype == 'video'){
             hhh = '<videogular>\
-                <vg-media vg-src="[{src: (\'http://torqkd.com/uploads/video1/'+item.filename+'.mp4\'), type: \'video/mp4\'}]" vg-native-controls="true" ></vg-media>\
+                <vg-media vg-src="[{src: (\'http://torqkd.com/uploads/video1/converted/'+item.filename+'.mp4\'), type: \'video/mp4\'}]" vg-native-controls="true" ></vg-media>\
                 <vg-poster vg-url="\'http://torqkd.com/uploads/video1/thumb/'+item.filename+'.jpg\'"></vg-poster>\
             </videogular>';
         }
@@ -686,6 +877,30 @@ gartitube.controller('loader', function($scope,$sce,$http,MyService,$cookieStore
 
         $scope.images[$scope.currentIndex].visible = true; // make the current image visible
     });
+
+});
+
+
+
+gartitube.controller('logout', function($scope,$http,$state,$cookieStore,$cookies) {
+
+
+    $scope.init = function () {
+        $cookieStore.remove('username');
+        //$cookieStore.remove('userid');
+        $state.go('index');
+        //alert($cookieStore.get('userid'));
+    };
+
+    $scope.init();
+
+});
+
+
+gartitube.controller('friends', function($scope,$http,$state,$cookieStore,$cookies) {
+
+
+   //alert(89);
 
 });
 
