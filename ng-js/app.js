@@ -153,20 +153,20 @@ gartitube.config(function($stateProvider, $urlRouterProvider,$sceProvider,$sceDe
 
                 // the main template will be placed here (relatively named)
                 '': { templateUrl: 'index.html' },
-                /* 'navigation': { templateUrl: 'partials/navigation.html'
+                 'navigation': { templateUrl: 'partials/navigation.html'
                  //ontroller:'loader'
 
-                 },*/
+                 },
 
                 // the child views will be defined here (absolutely named)
                 'content': { templateUrl: 'partials/friends.html' ,
                     controller:'friends'
 
                 },
-                /*'footer': { templateUrl: 'partials/footer.html' ,
+                'footer': { templateUrl: 'partials/footer.html' ,
                  controller:'record'
 
-                 }*/
+                 }
 
 
 
