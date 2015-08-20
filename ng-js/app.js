@@ -15,7 +15,9 @@ var gartitube = angular.module('gartitube', [
     'ngDialog',
     'ngSanitize',
     'ap.lateralSlideMenu',
-    'com.2fdevs.videogular'
+    'com.2fdevs.videogular',
+    'ui.calendar',
+    'ui.bootstrap'
     // 'homeControllers'
 ]);
 
@@ -121,8 +123,9 @@ gartitube.config(function($stateProvider, $urlRouterProvider,$sceProvider,$sceDe
 
                 // the main template will be placed here (relatively named)
                 '': { templateUrl: 'index.html' },
-                'navigation': { templateUrl: 'partials/navigation.html'
+                'navigation': { templateUrl: 'partials/navigation.html',
                     //ontroller:'loader'
+                    controller:'navigation'
 
                 },
 
@@ -153,8 +156,9 @@ gartitube.config(function($stateProvider, $urlRouterProvider,$sceProvider,$sceDe
 
                 // the main template will be placed here (relatively named)
                 '': { templateUrl: 'index.html' },
-                 'navigation': { templateUrl: 'partials/navigation.html'
+                 'navigation': { templateUrl: 'partials/navigation.html',
                  //ontroller:'loader'
+                     controller:'navigation'
 
                  },
 
@@ -213,7 +217,8 @@ gartitube.config(function($stateProvider, $urlRouterProvider,$sceProvider,$sceDe
 
                 // the main template will be placed here (relatively named)
                 '': { templateUrl: 'index.html' },
-                'navigation': { templateUrl: 'partials/navigation.html'
+                'navigation': { templateUrl: 'partials/navigation.html',
+                    controller:'navigation'
                     //ontroller:'loader'
 
                 },
@@ -221,6 +226,125 @@ gartitube.config(function($stateProvider, $urlRouterProvider,$sceProvider,$sceDe
                 // the child views will be defined here (absolutely named)
                 'content': { templateUrl: 'partials/share.html' ,
                     controller:'share'
+
+                },
+                'footer': { templateUrl: 'partials/footer.html' ,
+                    controller:'record'
+
+                }
+
+
+
+            }
+        })
+
+            .state('templates',{
+                url:"/templates",
+
+
+                views: {
+
+                    // the main template will be placed here (relatively named)
+                    '': { templateUrl: 'index.html' },
+                    'navigation': { templateUrl: 'partials/navigation.html',
+                        controller:'navigation'
+                        //ontroller:'loader'
+
+                    },
+
+                    // the child views will be defined here (absolutely named)
+                    'content': { templateUrl: 'partials/templates.html' ,
+                        controller:'templates'
+
+                    },
+                    'footer': { templateUrl: 'partials/footer.html' ,
+                        controller:'record'
+
+                    }
+
+
+
+                }
+            }
+
+        )
+        .state('chartity',{
+            url:"/chartity",
+
+
+            views: {
+
+                // the main template will be placed here (relatively named)
+                '': { templateUrl: 'index.html' },
+                'navigation': { templateUrl: 'partials/navigation.html',
+                    controller:'navigation'
+                    //ontroller:'loader'
+
+                },
+
+                // the child views will be defined here (absolutely named)
+                'content': { templateUrl: 'partials/chartity.html' ,
+                    controller:'chartity'
+
+                },
+                'footer': { templateUrl: 'partials/footer.html' ,
+                    controller:'record'
+
+                }
+
+
+
+            }
+        }
+
+    )
+        .state('reminders',{
+            url:"/reminders",
+
+
+            views: {
+
+                // the main template will be placed here (relatively named)
+                '': { templateUrl: 'index.html' },
+                'navigation': { templateUrl: 'partials/navigation.html',
+                    controller:'navigation'
+                    //ontroller:'loader'
+
+                },
+
+                // the child views will be defined here (absolutely named)
+                'content': { templateUrl: 'partials/reminders.html' ,
+                    controller:'reminders'
+
+                },
+                'footer': { templateUrl: 'partials/footer.html' ,
+                    controller:'record'
+
+                }
+
+
+
+            }
+        }
+
+    )
+        .state('details',{
+            url:"/details",
+
+
+            views: {
+
+                // the main template will be placed here (relatively named)
+                '': { templateUrl: 'index.html' },
+                'navigation': { templateUrl: 'partials/navigation.html',
+                    controller:'navigation'
+                    //ontroller:'loader'
+
+                },
+
+                // the child views will be defined here (absolutely named)
+                'content': { templateUrl: 'partials/details.html' ,
+                    controller:'details'
 
                 },
                 'footer': { templateUrl: 'partials/footer.html' ,
@@ -248,6 +372,19 @@ gartitube.directive('slider', function($timeout) {
         },
         link: function(scope, elem, attrs) {},
         templateUrl: 'partials/slider.html'
+    };
+});
+
+gartitube.directive('imageslider', function($timeout) {
+    return {
+        restrict: 'AE',
+        replace: true,
+        //$sceProvider:false,
+        scope: {
+            images: '='
+        },
+        link: function(scope, elem, attrs) {},
+        templateUrl: 'partials/imageslider.html'
     };
 });
 
@@ -413,16 +550,144 @@ gartitube.controller('index', function($scope,$sce,$http,MyService,$cookieStore,
 })
 gartitube.controller('record', function($scope,$sce,$http,MyService,$cookieStore,$state,ngDialog,number) {
 
+    $cookieStore.put('username',34);
+
     $scope.filename = '';
     $scope.filetype = '';
 
+    $scope.privacyVal = 'Public';
+    $scope.recipientId = [];
+
+    $scope.images = [{
+            src: 'ng-images/anniversary.png',
+            title: 'Pic 1'
+        },
+        {
+            src: 'ng-images/bday.png',
+            title: 'Pic 2'
+        },
+        {
+            src: 'ng-images/congrats.png',
+            title: 'Pic 2'
+        },
+        {
+            src: 'ng-images/get-well.png',
+            title: 'Pic 2'
+        },
+        {
+            src: 'ng-images/graduation.png',
+            title: 'Pic 2'
+        },
+        {
+            src: 'ng-images/just-because.png',
+            title: 'Pic 2'
+        },
+        {
+            src: 'ng-images/new-baby.png',
+            title: 'Pic 2'
+        },
+        {
+            src: 'ng-images/new-home.png',
+            title: 'Pic 2'
+        },
+        {
+            src: 'ng-images/religious-events.png',
+            title: 'Pic 2'
+        },
+        {
+            src: 'ng-images/retirement.png',
+            title: 'Pic 2'
+        },
+        {
+            src: 'ng-images/thank-you.png',
+            title: 'Pic 2'
+        },
+        {
+            src: 'ng-images/wedding.png',
+            title: 'Pic 2'
+        }
+    ];
+
+    $scope.currentIndex = 0;
+    $scope.next1= function() {
+        $scope.currentIndex < $scope.images.length - 1 ? $scope.currentIndex++ : $scope.currentIndex =  0;
+    };
+
+    $scope.prev1 = function() {
+        // $sce();
+        $scope.currentIndex > 0 ? $scope.currentIndex-- : $scope.currentIndex = $scope.images.length - 1;
+        //alert( $scope.currentIndex);
+    };
+
+    $scope.$watch('currentIndex', function() {
+        //alert(9);
+        $scope.images.forEach(function(image) {
+            //alert(image);
+            //$(image).hide(2000);
+            image.visible = false; // make every image invisible
+        });
+
+        $scope.images[$scope.currentIndex].visible = true; // make the current image visible
+    });
+
+
+
+    $http({
+        method  : 'POST',
+        async:   false,
+        url     : 'http://admin.gratitube.influxiq.com/?q=ngmodule/getfriendinfo',
+        data    : $.param({'username':$cookieStore.get('username')}),  // pass in data as strings
+        // data    : $.param({'username':34}),  // pass in data as strings
+        headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
+    }) .success(function(data) {
+
+        $scope.friendList = data.data;
+
+    });
+
+    $http({
+        method  : 'POST',
+        async:   false,
+        url     : 'http://admin.gratitube.influxiq.com/?q=ngmodule/getCharityList'
+    }) .success(function(data) {
+
+        $scope.charityList = data;
+
+    });
+
+    $scope.selRecipient = function(id){
+        var idx = $scope.recipientId.indexOf(id);
+        if($scope.recipientId.indexOf(id) < 0){
+            if($scope.recipientId.length){
+                $scope.recipientId.push(id);
+            }else{
+                $scope.recipientId = [id];
+            }
+        }else{
+            $scope.recipientId.splice(idx,1);
+        }
+    }
+
     $scope.sharegratitube=function(){
+
         $scope.formsubmitflag=0;
         //dialog1.close();
         //dialog2.close();
         ///alert(345);
         $scope.title=angular.element( document.querySelector( '#title' )).val();
         $scope.message=angular.element( document.querySelector( '#message' )).val();
+
+        if($scope.recipientId.length <1) {
+            $scope.formsubmitflag=1;
+
+            var dialog5 = ngDialog.open({
+                template: '<div><div>Please Select Atleast One Recipient</div><div>',
+                plain: true,
+                //showClose:false,
+                scope:$scope
+            });
+        }
+
         if($scope.title.length<1) {
             $scope.formsubmitflag=1;
 
@@ -469,9 +734,12 @@ gartitube.controller('record', function($scope,$sce,$http,MyService,$cookieStore
                 method  : 'POST',
                 async:   false,
                 url     : 'http://admin.gratitube.influxiq.com/?q=ngmodule/saveGratitube',
-                data    : $.param({'filename':$scope.filename,'filetype':$scope.filetype,'title':$scope.title,'message':$scope.message,'user_name':$cookieStore.get('username')}),  // pass in data as strings
+                data    : $.param({'filename':$scope.filename,'filetype':$scope.filetype,'title':$scope.title,'message':$scope.message,'user_name':$cookieStore.get('username'),'privacyVal':$scope.privacyVal,'recipientId':$scope.recipientId}),  // pass in data as strings
                 headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
             }) .success(function(data) {
+
+                //alert(data);
+
                 dialog1.close();
                 $cookieStore.put('lastUpFileName',$scope.filename);
                 $cookieStore.put('lastUpFileType',$scope.filetype);
@@ -591,14 +859,85 @@ gartitube.controller('share', function($scope,$sce,$http,MyService,$cookieStore,
     }
 
 });
+
+gartitube.controller('templates', function($scope,$sce,$http,MyService,$cookieStore,$state,ngDialog,number) {
+    // alert(1);
+});
+
+gartitube.controller('chartity', function($scope,$sce,$http,MyService,$cookieStore,$state,ngDialog,number) {
+    // alert(1);
+});
+
+gartitube.controller('reminders', function($scope,$sce,$http,MyService,$cookieStore,$state,ngDialog,number,$compile, $timeout, uiCalendarConfig) {
+    var date = new Date();
+    var d = date.getDate();
+    var m = date.getMonth();
+    var y = date.getFullYear();
+
+    /* config object */
+    $scope.uiConfig = {
+        calendar:{
+            height: 450,
+            editable: true,
+            header:{
+                left: 'title',
+                center: '',
+                right: 'today prev,next'
+            },
+            eventClick: $scope.alertOnEventClick,
+            eventDrop: $scope.alertOnDrop,
+            eventResize: $scope.alertOnResize,
+            eventRender: $scope.eventRender
+        }
+    };
+
+    /* event source that pulls from google.com */
+    $scope.eventSource = {
+        url: "http://www.google.com/calendar/feeds/usa__en%40holiday.calendar.google.com/public/basic",
+        className: 'gcal-event',           // an option!
+        currentTimezone: 'America/Chicago' // an option!
+    };
+    /* event source that contains custom events on the scope */
+    $scope.events = [
+        {title: 'All Day Event',start: new Date(y, m, 1)},
+        {title: 'Long Event',start: new Date(y, m, d - 5),end: new Date(y, m, d - 2)},
+        {id: 999,title: 'Repeating Event',start: new Date(y, m, d - 3, 16, 0),allDay: false},
+        {id: 999,title: 'Repeating Event',start: new Date(y, m, d + 4, 16, 0),allDay: false},
+        {title: 'Birthday Party',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false},
+        {title: 'Click for Google',start: new Date(y, m, 28),end: new Date(y, m, 29),url: 'http://google.com/'}
+    ];
+    /* event source that calls a function on every view switch */
+    $scope.eventsF = function (start, end, timezone, callback) {
+        var s = new Date(start).getTime() / 1000;
+        var e = new Date(end).getTime() / 1000;
+        var m = new Date(start).getMonth();
+        var events = [{title: 'Feed Me ' + m,start: s + (50000),end: s + (100000),allDay: false, className: ['customFeed']}];
+        callback(events);
+    };
+
+    $scope.uiConfig.calendar.dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    $scope.uiConfig.calendar.dayNamesShort = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+
+    $scope.eventSources = [$scope.events, $scope.eventSource, $scope.eventsF];
+
+
+});
+
+
+gartitube.controller('details', function($scope,$sce,$http,MyService,$cookieStore,$state,ngDialog,number) {
+    // alert(1);
+});
+
+
 gartitube.controller('navigation', function($scope,$sce,$http,MyService,$cookieStore,$state,ngDialog,number) {
 
 
     $scope.inIt= function () {
 
         $scope.userinfo={
-           // username:$cookieStore.get('username')
-            username:34
+            username:$cookieStore.get('username')
+            //username:34
 
 
         }
@@ -899,8 +1238,46 @@ gartitube.controller('logout', function($scope,$http,$state,$cookieStore,$cookie
 
 gartitube.controller('friends', function($scope,$http,$state,$cookieStore,$cookies) {
 
+    $http({
+        method  : 'POST',
+        async:   false,
+        url     : 'http://admin.gratitube.influxiq.com/?q=ngmodule/getfriendinfo',
+         data    : $.param({'username':$cookieStore.get('username')}),  // pass in data as strings
+       // data    : $.param({'username':34}),  // pass in data as strings
+        headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
+    }) .success(function(data) {
 
-   //alert(89);
+        $scope.friendList = data.data;
+
+    });
+
+    $scope.friendStatus = [];
+
+    $http({
+        method  : 'POST',
+        async:   false,
+        url     : 'http://admin.gratitube.influxiq.com/?q=ngmodule/getUserFriendRel',
+        data    : $.param({'username':$cookieStore.get('username')}),  // pass in data as strings
+        //data    : $.param({'username':34}),  // pass in data as strings
+        headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
+    }) .success(function(data) {
+
+        $scope.friendStatus = data;
+
+    });
+
+    $scope.changeStatus = function(itemId,status){
+        $scope.friendStatus[itemId] = status;
+        $http({
+            method  : 'POST',
+            async:   false,
+            url     : 'http://admin.gratitube.influxiq.com/?q=ngmodule/userfriendrel',
+            data    : $.param({'username':$cookieStore.get('username'),'friend_id':itemId,'status':status}),  // pass in data as strings
+        //    data    : $.param({'username':34,'friend_id':itemId,'status':status}),  // pass in data as strings
+            headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
+        }) .success(function(data) {
+        });
+    }
 
 });
 

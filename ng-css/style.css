@@ -107,7 +107,7 @@ font-size: 16px;
 
 .lateral-slide-menu li{ height: 64px;  background: url("../ng-images/1px-border.png") left bottom; background-repeat: repeat-x; clear: both; padding-top: 5px;}
 
-.lateral-slide-menu li img{ display: inline-block; float:left;}
+.lateral-slide-menu li img{ display: inline-block; float:left;  margin-top: 9px;}
 .lateral-slide-menu li label{ display: inline-block; float: left; padding-left: 15px; font-size: 20px;
     color: #fff; text-shadow: 0 0 2px #888; font-weight: 700; }
 
@@ -127,13 +127,13 @@ font-size: 16px;
 .proimg{ width: 50px;}
 
 
-.recordwrapper{ width: 100%; position: relative;}
+.recordwrapper{ width: 100%; position: relative; padding-bottom: 80px;}
 .recordimg{   background: url("../ng-images/page3_bg.png"); width: 100%; opacity: 0.5;}
 
 .recordimg img{ width: 100%;}
 
 .record-menu{ width:100%; position: absolute;
-    top: 25%; left: 0;}
+    top: 4%; left: 0;}
 
 
 .record-menu ul{ width: 280px; display: block; margin: 0 auto;
@@ -199,14 +199,20 @@ font-size: 16px;
 
 
 .friendswrapper{ width: 100%; background: #fff;
-    overflow: hidden;}
+    overflow: hidden; padding-bottom: 80px;}
 
-.friendswrapper .topsearch{ width: 280px; margin: 20px auto;  }
+.friendswrapper .topsearch{ width: 280px; margin: 20px auto; margin-top: 10px;  }
 
-.friendswrapper .topsearch .searchinput{ width: 180px;
+.friendswrapper .topsearch .searchinput{ width: 276px;
     height: 35px; border: solid 1px #26465D;
     padding: 0 4px;  border-radius: 4px; font-size: 14px;
 }
+
+.friendsmsg{ width: 100%; text-align: center; padding: 15px 5px 10px 5px; font-size: 22px; color:#26465d; }
+
+.noresults{ width: 100%; text-align: center; padding: 0px 0 25px 0; color: #C7141A; font-size: 18px;}
+
+.noresults strong{ font-weight: normal;}
 
 .friendswrapper .topsearch .searchbtn{background: rgba(214,58,61,1);
     background: -moz-linear-gradient(top, rgba(214,58,61,1) 0%, rgba(152,2,4,1) 100%);
@@ -217,21 +223,23 @@ font-size: 16px;
     background: linear-gradient(to bottom, rgba(214,58,61,1) 0%, rgba(152,2,4,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d63a3d', endColorstr='#980204', GradientType=0 ); border-radius: 4px; width: 80px; float: right; font-size: 18px; color: #fff;    height: 35px; border: none;}
 
-.friendswrapper .friendblock{ width: 96%;
+ .friendblock{ width: 96%;
     padding: 0px 2%;  border-top: solid 1px #26465D;}
 
-.friendswrapper .friendblock .frindimg{ width: 26%; float: left;}
-.friendswrapper .friendblock .frindimg img{ width: 100%;}
+ .friendblock:last-child{border-bottom: solid 1px #26465D;}
 
-.friendswrapper .friendblock .frindtext{ width: 40%; float: left;
+.friendblock .frindimg{ width: 26%; float: left;}
+ .friendblock .frindimg img{ width: 100%;}
+
+.friendblock .frindtext{ width: 40%; float: left;
     margin: 5% 2% 0 2%; font-size: 28px; color: #26465D; font-weight: normal; line-height: 30px;}
 
-.friendswrapper .friendblock .frindtext strong{ display: block;}
-.friendswrapper .friendblock .frindtext span{ font-weight: normal; font-size: 22px;}
+ .friendblock .frindtext strong{ display: block;}
+.friendblock .frindtext span{ font-weight: normal; font-size: 22px;}
 
-.friendswrapper .friendblock .frindbtn{ width: 154px; float: right; padding: 5% 1% 0 1%;}
+.friendblock .frindbtn{ width: 154px; float: right; padding: 5% 1% 0 1%;}
 
-.friendswrapper .friendblock .frindbtn .fbtn1{ width: 70px;
+.friendblock .frindbtn .fbtn1{ width: 70px;
     margin: 0 2%;
     height: 35px; background: rgba(214,58,61,1);
     background: -moz-linear-gradient(top, rgba(214,58,61,1) 0%, rgba(152,2,4,1) 100%);
@@ -243,7 +251,7 @@ font-size: 16px;
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d63a3d', endColorstr='#980204', GradientType=0 ); border-radius: 4px;  font-size: 17px; text-shadow: 0 0 2px #ccc; color: #fff; display: block; float: left; text-align: center; text-decoration: none; line-height: 35px; }
 
 
-.friendswrapper .friendblock .frindbtn .fbtn2{ width: 70px;
+.friendblock .frindbtn .fbtn2{ width: 70px;
     margin: 0 2%;
     height: 35px; background: rgba(214,58,61,1);
 
@@ -259,16 +267,160 @@ font-size: 16px;
 
     border-radius: 4px;  font-size: 17px; text-shadow: 0 0 2px #ccc; color: #26465D; display: block; float: left; text-align: center; text-decoration: none; line-height: 35px;}
 
+.selectdiv{ color: #235375;
+    font-size: 26px;  padding: 15px 10px;}
+
+.selectdiv select{ width: 100%; height: 40px; line-height: 40px; border: solid 1px #235375; border-radius: 5px; background: #D8DFE8; color: #235375; font-size: 18px;
+}
+
+.amountdiv{  border-top: 1px solid #75a3c4; padding: 15px 5% 15px 10px; color: #235375; font-size: 26px;}
+
+.amountdiv span{ display: inline-block; float: right;}
+.amountdiv input{ display: inline-block; border: 1px solid #75a3c4; color:#235375;  background: #D8DFE8; border: solid 1px #235375; font-size: 24px; padding: 4px; margin-left: 5px; width: 80px; text-align: right;}
+
+
+
+
+
+.recordslidermain{ width: 320px; margin: 0 auto;}
+
+.recordslidermain .recordsliderwrapper{ width: 100%;}
+
+.recordslidermain .recordsliderwrapper .galleryimgdiv{ width: 200px; float: left; margin: 0 9px; padding-bottom: 40px;}
+
+.recordslidermain .recordsliderwrapper .galleryimgdiv img{ width: 100%;}
+
+.recordslidermain .recordsliderwrapper .prevbtn{ width: 40px; float: left;}
+
+.recordslidermain .recordsliderwrapper .prevbtn img{width: 40px; margin-top: 90px; cursor: pointer;}
+
+.recordslidermain .recordsliderwrapper .nextbtn{ width: 40px; float: right;}
+
+.recordslidermain .recordsliderwrapper .nextbtn img{width: 40px; margin-top: 90px; cursor: pointer;}
+
+
+.recordslidermain .recordsliderwrapper .selectbtn{width: 90px;
+    margin: 0px auto; border: none;
+    height: 38px; background: rgba(214,58,61,1);
+    background: -moz-linear-gradient(top, rgba(214,58,61,1) 0%, rgba(152,2,4,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(214,58,61,1)), color-stop(100%, rgba(152,2,4,1)));
+    background: -webkit-linear-gradient(top, rgba(214,58,61,1) 0%, rgba(152,2,4,1) 100%);
+    background: -o-linear-gradient(top, rgba(214,58,61,1) 0%, rgba(152,2,4,1) 100%);
+    background: -ms-linear-gradient(top, rgba(214,58,61,1) 0%, rgba(152,2,4,1) 100%);
+    background: linear-gradient(to bottom, rgba(214,58,61,1) 0%, rgba(152,2,4,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d63a3d', endColorstr='#980204', GradientType=0 ); border-radius: 4px;  font-size: 17px; text-shadow: 0 0 2px #ccc; color: #fff; display: block;  text-align: center; text-decoration: none; line-height: 37px; cursor: pointer; }
+
+
+.recordslidermain .recordsliderwrapper .selectbtn2{width: 90px;
+    margin: 0px auto; border: none;
+    height: 38px; background: rgba(214,58,61,1);
+
+
+    background: rgba(168,182,208,1);
+    background: -moz-linear-gradient(top, rgba(168,182,208,1) 0%, rgba(157,163,173,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(168,182,208,1)), color-stop(100%, rgba(157,163,173,1)));
+    background: -webkit-linear-gradient(top, rgba(168,182,208,1) 0%, rgba(157,163,173,1) 100%);
+    background: -o-linear-gradient(top, rgba(168,182,208,1) 0%, rgba(157,163,173,1) 100%);
+    background: -ms-linear-gradient(top, rgba(168,182,208,1) 0%, rgba(157,163,173,1) 100%);
+    background: linear-gradient(to bottom, rgba(168,182,208,1) 0%, rgba(157,163,173,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a8b6d0', endColorstr='#9da3ad', GradientType=0 ); border-radius: 4px;  font-size: 17px; text-shadow: 0 0 2px #ccc; color: #fff; display: block;  text-align: center; text-decoration: none; line-height: 37px; cursor: pointer; }
+
+
+.imagelisting { width: 100%; margin: 40px auto; padding-bottom: 35px; padding-top: 48px; text-align: center;}
+
+.imagelisting .imgcondiv{ width: 32%; margin:0.1%; height: 158px; overflow: hidden; display: inline-block; position: relative;}
+
+.imagelisting .imgcondiv .listimg{ cursor: pointer; width: 100%; margin-bottom: 8px; }
+
+.imagelisting .imgcondiv  .palybtn{ position: absolute; width: 100%; height: 158px; left: 0%; top: 0%}
+
+.imagelisting .imgcondiv  .palybtn .palybtnimgdiv{ width: 100%;}
+
+.imagelisting .imgcondiv  .palybtn .palybtnimgdiv img{ width: 50px; display: block; margin: 0 auto; margin-top: 50px;}
+
+.detailbody{ padding-bottom: 80px;}
+.detailwrapper{ width:90%; margin: 25px auto; background: #fff; border-radius: 5px; padding:8px; border: solid 1px #C2CBD2; }
+
+.detailwrapper .detailwrappertext1 h2{ font-size: 22px; color: #235375; margin: 0; padding: 0 0 5px 0;}
+
+.detailwrapper .detailwrappertext1 label{font-size: 16px; color: #235375; display: inline-block; float: left; margin: 0; padding: 0;}
+
+.detailwrapper .detailwrappertext1 span{ display: inline-block; float: right; background: url("../ng-images/time.png"); background-repeat: no-repeat; background-position: left center; padding-left: 20px; font-weight: bold; font-size: 14px; color: #235375;}
+
+.detailwrapper .detailwrappertext2{ padding:0 0 15px 0; font-size: 16px; color: #235375; line-height: 24px;}
+
+.detailwrapper .detailwrappertext2 h2{ font-size: 20px; color: #235375; margin: 0; padding: 0 0 5px 0;}
+
+.detailwrapper  .detailwrapperimage{ width: 100%; max-height: 300px; overflow: hidden; margin: 15px 0;}
+
+.detailwrapper  .detailwrappervideo{ width: 100%; margin: 15px 0;}
+
+.detailwrapper  .detailwrapperimage img{ width: 100%;}
+
+
+.calendarwrapper{ width: 96%; background: #fff; margin: 25px auto; padding: 2%;}
+
+.calendarwrapper h2{font-size: 22px; color: #235375;}
+
+.calendarwrapper thead th{ background: #2A4E68;  color: #fff; text-align: center; font-size: 22px; padding: 8px 0; font-weight: normal; border-top: solid 1px #333;}
+
+.calendarwrapper td{ text-align: center; vertical-align: middle; font-size: 18px;  color: #2A4E68; }
+
+.calendarbottom{ text-align: center; font-size: 22px; padding: 8px 0; font-weight: normal; color: #2A4E68}
+
+.fc-ltr .fc-basic-view .fc-day-number {
+    text-align: center!important;
+}
+
+.fc-row .fc-content-skeleton td, .fc-row .fc-helper-skeleton td{ line-height: 68px!important;}
+
+.plasemenu img{ width: 58px; height: 48px; margin: 8px 0 0 0;}
+
+@media screen and (max-width: 880px) {
+
+    .imagelisting .imgcondiv{  height: 145px;}
+    .imagelisting .imgcondiv  .palybtn{  height: 145px;}
+
+    .imagelisting .imgcondiv  .palybtn .palybtnimgdiv img{ width: 45px; margin-top: 40px;}
+}
+
+@media screen and (max-width: 800px) {
+
+    .imagelisting .imgcondiv{  height: 190px; width: 49%;}
+    .imagelisting .imgcondiv  .palybtn{  height: 190px;}
+
+    .imagelisting .imgcondiv  .palybtn .palybtnimgdiv img{ width: 50px; margin-top: 70px;}
+}
+
+
+@media screen and (max-width: 680px) {
+
+    .imagelisting .imgcondiv{  height: 160px; width: 49%;}
+    .imagelisting .imgcondiv  .palybtn{  height: 160px;}
+
+    .imagelisting .imgcondiv  .palybtn .palybtnimgdiv img{ width: 50px; margin-top: 50px;}
+}
+
+
+
+
 @media screen and (max-width: 580px) {
 
-    .friendswrapper .friendblock .frindimg{ width: 20%; float: left;}
 
 
-    .friendswrapper .friendblock .frindtext{ width: 40%; float: left;
+    .imagelisting .imgcondiv{  height: 140px; width: 49%;}
+    .imagelisting .imgcondiv  .palybtn{  height: 140px;}
+
+    .imagelisting .imgcondiv  .palybtn .palybtnimgdiv img{ width: 45px; margin-top: 45px;}
+
+   .friendblock .frindimg{ width: 20%; float: left;}
+
+
+   .friendblock .frindtext{ width: 40%; float: left;
         margin: 6px 2% 0 2%; font-size: 22px; color: #26465D; font-weight: normal; line-height: 26px;}
 
 
-    .friendswrapper .friendblock .frindtext span{ font-weight: normal; font-size: 18px;}
+     .friendblock .frindtext span{ font-weight: normal; font-size: 18px;}
 
 
 
@@ -279,31 +431,55 @@ font-size: 16px;
 
     .footerblock{
         position: fixed; left: 0; bottom: 0; width: 100%; background: url("../ng-images/bu_bg.png") left bottom; background-repeat: repeat-x; height: 50px; padding-top: 6px;}
-
+    #mainView .MyGratitubes-contain{ padding-bottom: 80px;}
 
     #mainView .MyGratitubes-contain .MyGratitubes-block label strong{ font-size: 16px; line-height: 20px; color: #2B547E;}
 
     #mainView .MyGratitubes-contain .MyGratitubes-block label strong span{ font-size: 14px; font-weight: normal; }
 }
 
+
+@media screen and (max-width: 480px) {
+.imagelisting .imgcondiv{  height: 130px;}
+.imagelisting .imgcondiv  .palybtn{  height: 130px;}
+
+.imagelisting .imgcondiv  .palybtn .palybtnimgdiv img{ width: 50px; margin-top: 40px;}
+
+}
+
 @media screen and (max-width: 475px) {
 
-    .friendswrapper .friendblock .frindimg{ width: 15%; float: left;}
-    .friendswrapper .friendblock .frindtext{ width: 30%; float: left;
+ .friendblock .frindimg{ width: 15%; float: left;}
+.friendblock .frindtext{ width: 30%; float: left;
         margin: 6px 2% 0 2%; font-size: 18px; color: #26465D; font-weight: normal; line-height: 20px;}
 
 
-    .friendswrapper .friendblock .frindtext span{ font-weight: normal; font-size: 16px;}
+  .friendblock .frindtext span{ font-weight: normal; font-size: 16px;}
 
-    .friendswrapper .friendblock .frindbtn{ width: 154px; float: right; padding: 6px 1% 0 1%;}
+  .friendblock .frindbtn{ width: 154px; float: right; padding: 6px 1% 0 1%;}
 }
 
 
 @media screen and (max-width: 360px) {
+
+
+
+    .imagelisting .imgcondiv{  height: 100px;}
+    .imagelisting .imgcondiv  .palybtn{  height: 100px;}
+
+  .imagelisting .imgcondiv  .palybtn .palybtnimgdiv img{ width: 30px; margin-top: 36px;}
+
+
+
+
+    .amountdiv span{ display: inline-block; float: none;}
     .containlogo{ width: 100%;}
 
-    .toggle-menu img{ width: 60%; margin: 6px 0 0 0;}
+    .toggle-menu img{ width: 60%; margin: 6px 0 0 0;  height:48px;}
 
+    .plasemenu img{ width: 60%; margin: 13px 0 0 0; height: 39px;}
+
+    .calendarwrapper thead th{ font-size: 16px; font-weight: bold;}
 
 
 
@@ -314,7 +490,7 @@ font-size: 16px;
     #tabs ul li{ float: left; width: 33.3%; list-style: none; background: none; display: block; text-align: center; padding: 16px 0;  font-family: Arial, Helvetica, sans-serif; font-size:14px; line-height:2em; color:#26465d;  text-shadow: 0 1px 1px #fff; cursor: pointer;}
 
     .record-menu{ width:100%; position: absolute;
-        top: 6%; left: 0;}
+        top: 4%; left: 0;}
 
     .sliderbodywrapper p{ font-size: 14px;}
 
@@ -323,19 +499,30 @@ font-size: 16px;
     .slider5img{ width: 100px;}
     .slider5text{ width: 135px;}
 
-    .friendswrapper .friendblock .frindbtn{ width:70px; padding: 6px 1% 0 1%;}
+   .friendblock .frindbtn{ width:70px; padding: 6px 1% 0 1%;}
 
-    .friendswrapper .friendblock .frindbtn .fbtn1{ width: 70px; float: none; margin: 4px auto; height: 28px; line-height: 28px;}
-    .friendswrapper .friendblock .frindbtn .fbtn2{ width: 70px; float: none; margin: 4px auto;  height: 28px; line-height: 28px;}
+    .friendblock .frindbtn .fbtn1{ width: 70px; float: none; margin: 4px auto; height: 28px; line-height: 28px;}
+    .friendblock .frindbtn .fbtn2{ width: 70px; float: none; margin: 4px auto;  height: 28px; line-height: 28px;}
 
 
 
-    .friendswrapper .friendblock .frindimg{ width: 100px; float: left;}
-    .friendswrapper .friendblock .frindtext{ width: 110px; float: left;}
+     .friendblock .frindimg{ width: 100px; float: left;}
+    .friendblock .frindtext{ width: 110px; float: left;}
 
-    .friendswrapper .friendblock{ width:96%;
+    .friendblock{ width:96%;
         padding: 0px 2%;  border-top: solid 1px #26465D; margin: 0 auto;}
 
 }
 
 
+@media screen and (max-width: 320px) {
+
+
+
+    .imagelisting .imgcondiv{  height: 86px;}
+    .imagelisting .imgcondiv  .palybtn{  height: 86px;}
+
+    .imagelisting .imgcondiv  .palybtn .palybtnimgdiv img{ width: 30px; margin-top: 30px;}
+
+
+}
