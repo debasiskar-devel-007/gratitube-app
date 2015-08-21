@@ -85,7 +85,7 @@
 }
 
 .ngdialog.ngdialog-theme-default .ngdialog-close {
-  background: url('../images/close.png');
+  background: url('../ng-images/close.png');
   border-radius: 3px;
   color: #bbb;
   content: '\00D7';

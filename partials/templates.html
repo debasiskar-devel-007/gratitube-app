@@ -20,123 +20,19 @@
 
     <div style="width: 100%;">
 
-    <div class="imgcondiv">
-        <img src="http://torqkd.com/uploads/video1/images/1056160566_1439464264.jpg" class="listimg">
+    <div class="imgcondiv" ng-repeat="item in templatesList" ng-click="selTemplate(item)">
+        <img ng-if="item.file_type == 'image'" src="http://torqkd.com/uploads/video1/images/{{item.file_name}}.jpg" class="listimg">
+        <img ng-if="item.file_type == 'video'" src="http://torqkd.com/uploads/video1/thumb/{{item.file_name}}.jpg" class="listimg">
 
-        <div class="palybtn">
+        <div class="palybtn" ng-if="item.file_type == 'video'">
             <div class="palybtnimgdiv">
-        <img src="/ng-images/playbtn.png" >
+				<img src="/ng-images/playbtn.png" >
 
             </div>
         </div>
 
 
     </div>
-    <div class="imgcondiv"> <img src="http://torqkd.com/uploads/video1/images/112192083_1439388827.jpg" class="listimg">
-        <div class="palybtn">
-            <div class="palybtnimgdiv">
-                <img src="/ng-images/playbtn.png" >
-
-            </div>
-        </div>
-
-    </div>
-    <div class="imgcondiv"> <img src="http://torqkd.com/uploads/video1/thumb/1038216663_1438943342.jpg" class="listimg">
-
-        <div class="palybtn">
-            <div class="palybtnimgdiv">
-                <img src="/ng-images/playbtn.png" >
-
-            </div>
-        </div>
-    </div>
-    <div class="imgcondiv"><img src="http://torqkd.com/uploads/video1/thumb/1051310878_1438953586.jpg" class="listimg">
-
-        <div class="palybtn">
-            <div class="palybtnimgdiv">
-                <img src="/ng-images/playbtn.png" >
-
-            </div>
-        </div>
-    </div>
-        <div class="imgcondiv">
-            <img src="http://torqkd.com/uploads/video1/images/1056160566_1439464264.jpg" class="listimg">
-
-            <div class="palybtn">
-                <div class="palybtnimgdiv">
-                    <img src="/ng-images/playbtn.png" >
-
-                </div>
-            </div>
-
-
-        </div>
-        <div class="imgcondiv"> <img src="http://torqkd.com/uploads/video1/images/112192083_1439388827.jpg" class="listimg">
-            <div class="palybtn">
-                <div class="palybtnimgdiv">
-                    <img src="/ng-images/playbtn.png" >
-
-                </div>
-            </div>
-
-        </div>
-        <div class="imgcondiv"> <img src="http://torqkd.com/uploads/video1/thumb/1038216663_1438943342.jpg" class="listimg">
-
-            <div class="palybtn">
-                <div class="palybtnimgdiv">
-                    <img src="/ng-images/playbtn.png" >
-
-                </div>
-            </div>
-        </div>
-        <div class="imgcondiv"><img src="http://torqkd.com/uploads/video1/thumb/1051310878_1438953586.jpg" class="listimg">
-
-            <div class="palybtn">
-                <div class="palybtnimgdiv">
-                    <img src="/ng-images/playbtn.png" >
-
-                </div>
-            </div>
-        </div>
-        <div class="imgcondiv">
-            <img src="http://torqkd.com/uploads/video1/images/1056160566_1439464264.jpg" class="listimg">
-
-            <div class="palybtn">
-                <div class="palybtnimgdiv">
-                    <img src="/ng-images/playbtn.png" >
-
-                </div>
-            </div>
-
-
-        </div>
-        <div class="imgcondiv"> <img src="http://torqkd.com/uploads/video1/images/112192083_1439388827.jpg" class="listimg">
-            <div class="palybtn">
-                <div class="palybtnimgdiv">
-                    <img src="/ng-images/playbtn.png" >
-
-                </div>
-            </div>
-
-        </div>
-        <div class="imgcondiv"> <img src="http://torqkd.com/uploads/video1/thumb/1038216663_1438943342.jpg" class="listimg">
-
-            <div class="palybtn">
-                <div class="palybtnimgdiv">
-                    <img src="/ng-images/playbtn.png" >
-
-                </div>
-            </div>
-        </div>
-        <div class="imgcondiv"><img src="http://torqkd.com/uploads/video1/thumb/1051310878_1438953586.jpg" class="listimg">
-
-            <div class="palybtn">
-                <div class="palybtnimgdiv">
-                    <img src="/ng-images/playbtn.png" >
-
-                </div>
-            </div>
-        </div>
 
 </div>
 </div>

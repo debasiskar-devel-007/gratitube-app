@@ -66,15 +66,50 @@
 
     <script type="text/ng-template" id="two.tpl.html">
         <div class="tabc" id="viewTwo">
-            <h1>View Two</h1>
-            <p>Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu.</p>
+
+            <div class="goodnews">
+
+            <h2> <a href="#"> Select Recipient</a></h2>
+            <h2> Select RecipientSelect RecipientSelect RecipientSelect RecipientSelect RecipientSelect RecipientSelect RecipientSelect RecipientSelect RecipientSelect Recipient</h2>
+            <h2> Select Recipient</h2>
+            <h2> Select Recipient</h2>
+            <h2> Select Recipient</h2>
+            <h2> Select Recipient</h2>
+            <h2> Select Recipient</h2>
+
+
+            </div>
         </div>
     </script>
 
     <script type="text/ng-template" id="three.tpl.html">
         <div class="tabc" id="viewThree">
-            <h1>View Three</h1>
-            <p>In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu.</p>
+            <div class="MyGratitubes-contain">
+            <div class="MyGratitubes-block" ng-repeat="item1 in allFileList">
+                <a href="javascript:void(0);">
+                    <!--<img src="./ng-images/pic1.png" alt="#"  class="proimg" style="max-height: 160px;" />-->
+                    <img ng-if="item1.filetype=='image'" src="http://torqkd.com/uploads/video1/images/{{item1.filename}}.jpg" alt="#"  class="proimg" style="max-height: 160px;" ng-click="showFile(item1)" />
+                    <spam class="videoplay"><img ng-if="item1.filetype=='video'" src="http://torqkd.com/uploads/video1/thumb/{{item1.filename}}.jpg" alt="#"  class="proimg " style="max-height: 160px;" ng-click="showFile(item1)" /></spam>
+
+
+
+                    <label>
+                        <strong>{{item1.title}}</strong>
+
+                        <!--<br/>   <br/>
+
+                        <strong><span>2.00</span> User Name</strong>-->
+
+
+
+                    </label>
+
+                </a>
+
+                <div class="clear"></div>
+            </div>
+
+        </div>
         </div>
     </script>
 

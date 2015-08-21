@@ -684,11 +684,12 @@ function Calendar(element, instanceOptions) {
 
 	// Renders a view because of a date change, view-type change, or for the first time
 	function renderView(delta, viewName) {
-		ignoreWindowResize++;
+
+        ignoreWindowResize++;
 
 		// if viewName is changing, destroy the old view
 		if (currentView && viewName && currentView.name !== viewName) {
-			header.deactivateButton(currentView.name);
+            header.deactivateButton(currentView.name);
 			freezeContentHeight(); // prevent a scroll jump when view element is removed
 			if (currentView.start) { // rendered before?
 				currentView.destroy();
@@ -706,7 +707,8 @@ function Calendar(element, instanceOptions) {
 
 		if (currentView) {
 
-			// let the view determine what the delta means
+
+            // let the view determine what the delta means
 			if (delta) {
 				date = currentView.incrementDate(date, delta);
 			}

@@ -6,7 +6,7 @@
             </div>
             </td>
             <td align="center" valign="middle" width="50%"><img src="./ng-images/reminders.png" alt="#" class="containlogo"  style="display: block; margin: 0 auto;"/></td>
-            <td align="right" valign="middle" width="25%"> <a href="javascript:void(0)"  class="plasemenu"><img src="./ng-images/plus.png" alt="#" style="cursor: pointer;  " /></a></td>
+            <td align="right" valign="middle" width="25%"> <a ui-sref="add-reminder"  class="plasemenu"><img src="./ng-images/plus.png" alt="#" style="cursor: pointer;  " /></a></td>
 
 
 
@@ -17,11 +17,7 @@
 </div>
 
 <div class="maincontent">
-
     <div class="calendarwrapper">
-    <div class="calendar" ng-model="eventSources" calendar="myCalendar1" ui-calendar="uiConfig.calendar"></div>
-
-
-
+        <div class="calendar" ng-model="eventSources" calendar="myCalendar3" ui-calendar="uiConfig.calendar"></div>
     </div>
 </div>
