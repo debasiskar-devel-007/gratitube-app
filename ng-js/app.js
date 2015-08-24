@@ -395,7 +395,7 @@ gartitube.config(function($stateProvider, $urlRouterProvider,$sceProvider,$sceDe
 
     )
         .state('details',{
-            url:"/details",
+            url:"/details/:id",
 
 
             views: {
@@ -411,6 +411,36 @@ gartitube.config(function($stateProvider, $urlRouterProvider,$sceProvider,$sceDe
                 // the child views will be defined here (absolutely named)
                 'content': { templateUrl: 'partials/details.html' ,
                     controller:'details'
+
+                },
+                'footer': { templateUrl: 'partials/footer.html' ,
+                    controller:'footer'
+
+                }
+
+
+
+            }
+        }
+
+    )
+	 .state('news-details',{
+            url:"/news-details/:id",
+
+
+            views: {
+
+                // the main template will be placed here (relatively named)
+                '': { templateUrl: 'index.html' },
+                'navigation': { templateUrl: 'partials/navigation.html',
+                    controller:'navigation'
+                    //ontroller:'loader'
+
+                },
+
+                // the child views will be defined here (absolutely named)
+                'content': { templateUrl: 'partials/news_details.html' ,
+                    controller:'newsDetails'
 
                 },
                 'footer': { templateUrl: 'partials/footer.html' ,
@@ -616,7 +646,9 @@ gartitube.controller('index', function($scope,$sce,$http,MyService,$cookieStore,
 })
 gartitube.controller('record', function($scope,$sce,$http,MyService,$cookieStore,$state,ngDialog,number) {
 
-    $scope.filename = '';
+    //$cookieStore.put('username',34);
+	
+	$scope.filename = '';
     $scope.filetype = '';
 
     $scope.privacyVal = 'Public';
@@ -624,51 +656,64 @@ gartitube.controller('record', function($scope,$sce,$http,MyService,$cookieStore
 	
 	$scope.images = [{
             src: 'ng-images/anniversary.png',
-            title: 'Pic 1'
+            title: 'Pic 1',
+            price:'$24.99'
         },
         {
             src: 'ng-images/bday.png',
-            title: 'Pic 2'
+            title: 'Pic 2',
+            price:'$29.99'
         },
         {
             src: 'ng-images/congrats.png',
-            title: 'Pic 2'
+            title: 'Pic 2',
+            price:'$21.99'
         },
         {
             src: 'ng-images/get-well.png',
-            title: 'Pic 2'
+            title: 'Pic 2',
+            price:'$44.99'
         },
         {
             src: 'ng-images/graduation.png',
-            title: 'Pic 2'
+            title: 'Pic 2',
+            price:'$34.99'
+
         },
         {
             src: 'ng-images/just-because.png',
-            title: 'Pic 2'
+            title: 'Pic 2',
+            price:'$39.99'
         },
         {
             src: 'ng-images/new-baby.png',
-            title: 'Pic 2'
+            title: 'Pic 2',
+            price:'$14.99'
         },
         {
             src: 'ng-images/new-home.png',
-            title: 'Pic 2'
+            title: 'Pic 2',
+            price:'$19.99'
         },
         {
             src: 'ng-images/religious-events.png',
-            title: 'Pic 2'
+            title: 'Pic 2',
+            price:'$4.99'
         },
         {
             src: 'ng-images/retirement.png',
-            title: 'Pic 2'
+            title: 'Pic 2',
+            price:'$24.99'
         },
         {
             src: 'ng-images/thank-you.png',
-            title: 'Pic 2'
+            title: 'Pic 2',
+            price:'$49.99'
         },
         {
             src: 'ng-images/wedding.png',
-            title: 'Pic 2'
+            title: 'Pic 2',
+            price:'$4.99'
         }
     ];
 
@@ -701,7 +746,7 @@ gartitube.controller('record', function($scope,$sce,$http,MyService,$cookieStore
         async:   false,
         url     : 'http://admin.gratitube.influxiq.com/?q=ngmodule/getfriendinfo',
         data    : $.param({'username':$cookieStore.get('username')}),  // pass in data as strings
-        // data    : $.param({'username':34}),  // pass in data as strings
+        //data    : $.param({'username':34}),  // pass in data as strings
         headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
     }) .success(function(data) {
 
@@ -962,7 +1007,27 @@ gartitube.controller('chartity', function($scope,$sce,$http,MyService,$cookieSto
     });
 });
 
-gartitube.controller('reminders', function($scope,$sce,$http,MyService,$cookieStore,$state,ngDialog,number,$compile, $timeout, uiCalendarConfig,MyCalendar) {
+gartitube.controller('reminders', function($scope,$sce,$http,MyService,$cookieStore,$state,ngDialog,number,$compile, $timeout, uiCalendarConfig,MyCalendar,$filter) {
+
+
+
+
+
+    $scope.converttodateformat=function(dateval){
+
+        //return 'teeewst'+dateval;
+        return $filter('date')(new Date(dateval), 'dd/MM/yyyy');
+    }
+
+    $scope.vieweventdetailspopup=function(date){
+
+        $scope.dialog1 = ngDialog.open({
+            template: '<div><h1>'+date.title+'</h1><br><span>'+date.details+'</span><div>',
+            plain: true,
+            showClose:true,
+            scope:$scope
+        });
+    }
 
     if(typeof ( $cookieStore.get('addNewReminder')) != 'undefined'){
         $cookieStore.remove('addNewReminder');
@@ -1129,8 +1194,46 @@ gartitube.controller('addreminder', function($scope,$sce,$http,MyService,$cookie
 
 });
 
-gartitube.controller('details', function($scope,$sce,$http,MyService,$cookieStore,$state,ngDialog,number) {
-    // alert(1);
+gartitube.controller('newsDetails', function($scope,$stateParams,$sce,$http,MyService,$cookieStore,$state,ngDialog,number) {
+	
+	
+	
+	$http({
+                method  : 'POST',
+                async:   false,
+                url     : 'http://admin.gratitube.influxiq.com/?q=ngmodule/getgoodnewsById',
+                data    : $.param({'newsId':$stateParams.id}),  // pass in data as strings
+                headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
+            }) .success(function(data) {
+
+                $scope.newsDetails = data;
+
+            });
+	
+});
+gartitube.controller('details', function($scope,$stateParams,$sce,$http,MyService,$cookieStore,$state,ngDialog,number) {
+    
+	$http({
+                method  : 'POST',
+                async:   false,
+                url     : 'http://admin.gratitube.influxiq.com/?q=ngmodule/gratitubeById',
+                data    : $.param({'gratitubeId':$stateParams.id}),  // pass in data as strings
+                headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
+            }) .success(function(data) {
+
+                $scope.gratDetails = data;
+				
+				
+
+            });
+
+    $scope.selTemplate = function(item){
+
+        $cookieStore.put('chooseTemplateFile',item.filename);
+        $cookieStore.put('chooseTemplateFileType',item.filetype);
+
+        $state.go('record');
+    }
      
 });
 
@@ -1194,7 +1297,7 @@ gartitube.controller('navigation', function($scope,$sce,$http,MyService,$cookieS
     setTimeout(function(){
 
         $scope.inIt();
-    },3100);
+    },100);
 
 })
 
@@ -1246,6 +1349,13 @@ gartitube.controller('home', function($scope,$sce,$http,MyService,$cookieStore,$
     }) .success(function(result) {
 
         $scope.fileList = result;
+        if(typeof (result) === 'object')
+            $scope.filecount = result.length;
+        else
+            $scope.filecount = 0;
+        console.log(result);
+        console.log($scope.filecount);
+      // alert($scope.filecount);
 
     });
 
@@ -1256,6 +1366,18 @@ gartitube.controller('home', function($scope,$sce,$http,MyService,$cookieStore,$
     }) .success(function(data) {
 
         $scope.allFileList = data;
+
+    });
+	
+	$scope.goodNewsList = [];
+	
+	$http({
+        method  : 'POST',
+        async:   false,
+        url     : 'http://admin.gratitube.influxiq.com/?q=ngmodule/getgoodnews'
+    }) .success(function(data) {
+
+        $scope.goodNewsList = data;
 
     });
 
@@ -1295,6 +1417,13 @@ gartitube.controller('gratitubesent', function($scope,$sce,$http,MyService,$cook
     }) .success(function(result) {
 
         $scope.fileList = result;
+
+        if(typeof (result) === 'object')
+            $scope.filecount = result.length;
+        else
+            $scope.filecount = 0;
+        console.log(result);
+        console.log($scope.filecount);
 
     });
 
@@ -1627,6 +1756,7 @@ gartitube.service('MyCalendar', function($http,$cookieStore) {
         async:   false,
         url     : 'http://admin.gratitube.influxiq.com/?q=ngmodule/getreminders',
         data    : $.param({'username':$cookieStore.get('username')}),  // pass in data as strings
+       // data    : $.param({'username':34}),  // pass in data as strings
         headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
     }) .success(function(data) {
 

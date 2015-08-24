@@ -19,5 +19,21 @@
 <div class="maincontent">
     <div class="calendarwrapper">
         <div class="calendar" ng-model="eventSources" calendar="myCalendar3" ui-calendar="uiConfig.calendar"></div>
+
+        <div class="eventlistmain">
+
+        <div class="eventlist" ng-repeat="event in events">
+
+            <span ng-click="vieweventdetailspopup(event)">
+                <span>{{converttodateformat(event.start)}}</span>
+                <label>{{event.title}}</label>
+
+            </span>
+        </div>
+
+        </div>
+
+
     </div>
 </div>
+

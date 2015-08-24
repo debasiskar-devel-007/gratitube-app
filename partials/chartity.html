@@ -19,7 +19,7 @@
 <div class="maincontent">
     <div class="recordbody">
         <div ng-repeat="item in charityList">
-            <h2 class="activerecord"> {{item.name}}</h2>
+            <a href="{{item.link}}" ><h2 class="activerecord"> {{item.name}}</h2></a>
             <div class="amountdiv">
                 <label>Donations To Date</label> <span>${{item.total}}</span>
                 <div class="clear"></div>

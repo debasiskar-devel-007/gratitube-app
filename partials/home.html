@@ -34,15 +34,15 @@
 
 
                 <div class="MyGratitubes-block" ng-repeat="item in fileList">
-                    <a href="javascript:void(0);">
+                    
                     <!--<img src="./ng-images/pic1.png" alt="#"  class="proimg" style="max-height: 160px;" />-->
-                    <img ng-if="item.filetype=='image'" src="http://torqkd.com/uploads/video1/images/{{item.filename}}.jpg" alt="#"  class="proimg" style="max-height: 160px;" ng-click="showFile(item)" />
-                    <spam class="videoplay"><img ng-if="item.filetype=='video'" src="http://torqkd.com/uploads/video1/thumb/{{item.filename}}.jpg" alt="#"  class="proimg " style="max-height: 160px;" ng-click="showFile(item)" /></spam>
+                    <img ng-if="item.filetype=='image'" src="http://torqkd.com/uploads/video1/images/{{item.filename}}.jpg" alt="#"  class="proimg" style="max-height: 160px; cursor:pointer;" ng-click="showFile(item)" />
+                    <spam class="videoplay"><img ng-if="item.filetype=='video'" src="http://torqkd.com/uploads/video1/thumb/{{item.filename}}.jpg" alt="#"  class="proimg " style="max-height: 160px; cursor:pointer;" ng-click="showFile(item)" /></spam>
 
 
 
                         <label>
-                        <strong>{{item.title}}</strong>
+                        <a ui-sref="details({id: item.id})"><strong>{{item.title}}</strong></a>
 
                             <!--<br/>   <br/>
 
@@ -52,12 +52,31 @@
 
                     </label>
 
-                    </a>
+                    
 
                     <div class="clear"></div>
+
+
+
+
+
                 </div>
 
+                <div class="First_Gratitube">
+                    <img src="./ng-images/logo.png" alt="#" class="logo" />
+
+                    <h5 ui-sref="record">Send Your
+                        <span ng-if="filecount>0">Next</span>
+                        <span ng-if="filecount<1">First</span>
+                        Gratitube !</h5>
+
+                </div>
+
+
             </div>
+
+
+
 
 
 
@@ -68,16 +87,7 @@
         <div class="tabc" id="viewTwo">
 
             <div class="goodnews">
-
-            <h2> <a href="#"> Select Recipient</a></h2>
-            <h2> Select RecipientSelect RecipientSelect RecipientSelect RecipientSelect RecipientSelect RecipientSelect RecipientSelect RecipientSelect RecipientSelect Recipient</h2>
-            <h2> Select Recipient</h2>
-            <h2> Select Recipient</h2>
-            <h2> Select Recipient</h2>
-            <h2> Select Recipient</h2>
-            <h2> Select Recipient</h2>
-
-
+				<h2 ng-repeat="item2 in goodNewsList"> <a ui-sref="news-details({id: item2.nid})"> {{item2.title}}</a></h2>
             </div>
         </div>
     </script>
@@ -86,15 +96,15 @@
         <div class="tabc" id="viewThree">
             <div class="MyGratitubes-contain">
             <div class="MyGratitubes-block" ng-repeat="item1 in allFileList">
-                <a href="javascript:void(0);">
+                
                     <!--<img src="./ng-images/pic1.png" alt="#"  class="proimg" style="max-height: 160px;" />-->
-                    <img ng-if="item1.filetype=='image'" src="http://torqkd.com/uploads/video1/images/{{item1.filename}}.jpg" alt="#"  class="proimg" style="max-height: 160px;" ng-click="showFile(item1)" />
-                    <spam class="videoplay"><img ng-if="item1.filetype=='video'" src="http://torqkd.com/uploads/video1/thumb/{{item1.filename}}.jpg" alt="#"  class="proimg " style="max-height: 160px;" ng-click="showFile(item1)" /></spam>
+                    <img ng-if="item1.filetype=='image'" src="http://torqkd.com/uploads/video1/images/{{item1.filename}}.jpg" alt="#"  class="proimg" style="max-height: 160px; cursor:pointer;" ng-click="showFile(item1)" />
+                    <spam class="videoplay"><img ng-if="item1.filetype=='video'" src="http://torqkd.com/uploads/video1/thumb/{{item1.filename}}.jpg" alt="#"  class="proimg " style="max-height: 160px; cursor:pointer;" ng-click="showFile(item1)" /></spam>
 
 
 
                     <label>
-                        <strong>{{item1.title}}</strong>
+                        <a ui-sref="details({id: item1.id})"><strong>{{item1.title}}</strong></a>
 
                         <!--<br/>   <br/>
 
@@ -104,7 +114,7 @@
 
                     </label>
 
-                </a>
+                
 
                 <div class="clear"></div>
             </div>

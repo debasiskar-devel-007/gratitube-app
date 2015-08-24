@@ -21,15 +21,15 @@
 
 
         <div class="MyGratitubes-block" ng-repeat="item in fileList">
-            <a href="javascript:void(0);">
+            
                 <!--<img src="./ng-images/pic1.png" alt="#"  class="proimg" style="max-height: 160px;" />-->
-                <img ng-if="item.filetype=='image'" src="http://torqkd.com/uploads/video1/images/{{item.filename}}.jpg" alt="#"  class="proimg" style="max-height: 160px;" ng-click="showFile(item)" />
-                <spam class="videoplay"><img ng-if="item.filetype=='video'" src="http://torqkd.com/uploads/video1/thumb/{{item.filename}}.jpg" alt="#"  class="proimg " style="max-height: 160px;" ng-click="showFile(item)" /></spam>
+                <img ng-if="item.filetype=='image'" src="http://torqkd.com/uploads/video1/images/{{item.filename}}.jpg" alt="#"  class="proimg" style="max-height: 160px; cursor:pointer;" ng-click="showFile(item)" />
+                <spam class="videoplay"><img ng-if="item.filetype=='video'" src="http://torqkd.com/uploads/video1/thumb/{{item.filename}}.jpg" alt="#"  class="proimg " style="max-height: 160px; cursor:pointer;" ng-click="showFile(item)" /></spam>
 
 
 
                 <label>
-                    <strong>{{item.title}}</strong>
+                    <a ui-sref="details({id: item.id})"><strong>{{item.title}}</strong></a>
 
                     <!--<br/>   <br/>
 
@@ -39,9 +39,19 @@
 
                 </label>
 
-            </a>
+            
 
             <div class="clear"></div>
+        </div>
+
+        <div class="First_Gratitube">
+            <img src="./ng-images/logo.png" alt="#" class="logo" />
+
+            <h5 ui-sref="record">Send Your
+                <span ng-if="filecount>0">Next</span>
+                <span ng-if="filecount<1">First</span>
+                Gratitube !</h5>
+
         </div>
 
     </div>
@@ -49,3 +59,4 @@
 
 
 </div>
+

@@ -25,31 +25,29 @@
     <div class="detailwrapper">
 
         <div class="detailwrappertext1">
-        <h2> Lorem Ipsum is simply dumm</h2>
-        <label> Form <strong>User Name</strong></label>
+        <h2> {{gratDetails.title}}</h2>
+        <!--<label> Form <strong>User Name</strong></label>-->
 
-        <span>2h</span>
+        <span>{{gratDetails.time}}</span>
 
             <div class="clear"></div>
 
         </div>
 
-        <div class="detailwrapperimage" style="display: none;">
-            <img src="http://torqkd.com/uploads/video1/thumb/1038216663_1438943342.jpg">
+        <div class="detailwrapperimage" ng-if="gratDetails.filetype == 'image'">
+            <img src="http://torqkd.com/uploads/video1/images/{{gratDetails.filename}}.jpg">
         </div>
-        <div class="detailwrappervideo">
-        <videogular ng-init="vidsources = [{src: ('http://torqkd.com/uploads/video1/converted/513751890_1439372820.mp4'), type: 'video/mp4'}]">
+        <div class="detailwrappervideo" ng-if="gratDetails.filetype == 'video'">
+        <videogular ng-init="vidsources = [{src: (gratDetails.video_url), type: 'video/mp4'}]">
             <vg-media vg-src="vidsources" vg-native-controls="true" ></vg-media>
-            <vg-poster vg-url="'http://torqkd.com/uploads/video1/thumb/1051310878_1438953586.jpg'"></vg-poster>
+            <vg-poster vg-url="'http://torqkd.com/uploads/video1/thumb/{{gratDetails.filename}}.jpg'"></vg-poster>
         </videogular>
         </div>
 
         <div class="detailwrappertext2">
         <h2>Message</h2>
 
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-
-
+            {{gratDetails.message}}
 
             </div>
 
@@ -57,7 +55,7 @@
         </div>
 
 
-
+<button value="Forward" ng-click="selTemplate(gratDetails)" class="Forwardbtn"> Forward It</button>
 
 
     </div>  </div>
