@@ -221,8 +221,15 @@ gartitube.config(function($stateProvider, $urlRouterProvider,$sceProvider,$sceDe
 
                 },*/
 
+                'navigation': { templateUrl: 'partials/navigation.html',
+                    controller:'navigation'
+                    //ontroller:'loader'
+
+                },
+
+
                 // the child views will be defined here (absolutely named)
-                'content': { templateUrl: 'partials/home.html' ,
+                'content': { templateUrl: 'partials/index.html' ,
                     controller:'logout'
 
                 }
@@ -1343,12 +1350,13 @@ gartitube.controller('home', function($scope,$sce,$http,MyService,$cookieStore,$
     $http({
         method  : 'POST',
         async:   false,
-        url     : 'http://admin.gratitube.influxiq.com/?q=ngmodule/getallfile',
+        url     : 'http://admin.gratitube.influxiq.com/?q=ngmodule/receiverGratitube',
         data    : $.param({'user_id':$cookieStore.get('username')}),  // pass in data as strings
         headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
     }) .success(function(result) {
 
         $scope.fileList = result;
+
         if(typeof (result) === 'object')
             $scope.filecount = result.length;
         else
@@ -1452,6 +1460,21 @@ gartitube.controller('gratitubesent', function($scope,$sce,$http,MyService,$cook
 gartitube.controller('loader', function($scope,$sce,$http,MyService,$cookieStore,$state,ngDialog) {
 
 
+
+   $scope.loginfacebook=function(){
+       var ua = navigator.userAgent.toLowerCase();
+       var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
+       alert(isAndroid);
+       if(isAndroid) {
+           // Do something!
+           // Redirect to Android-site?
+           //window.location = 'http://gratitube-app.influxiq.com/facebook';
+       }
+       else{
+
+           alert('not android');
+       }
+   }
     $scope.init=function(){
 
         $scope.username=angular.element( document.querySelector( '#username' )).val();
@@ -1623,8 +1646,7 @@ gartitube.controller('loader', function($scope,$sce,$http,MyService,$cookieStore
 
 gartitube.controller('logout', function($scope,$http,$state,$cookieStore,$cookies) {
 
-
-    $scope.init = function () {
+     $scope.init = function () {
         $cookieStore.remove('username');
         $cookieStore.remove('currenttab');
         //$cookieStore.remove('userid');
